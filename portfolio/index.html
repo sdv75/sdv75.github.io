@@ -1,4 +1,4 @@
-<!-- Сохраните этот код в корневом index.html -->
+<!-- В корневом index.html -->
 <!DOCTYPE html>
 <html>
 
@@ -7,21 +7,23 @@
   <title>Redirecting...</title>
   <script>
     (function () {
-      // Получаем предпочитаемый язык пользователя
+      // Определяем базовый путь: например, "/portfolio" из URL "https://name.github.io/portfolio/"
+      const pathname = window.location.pathname;
+      const basePath = pathname.substring(0, pathname.lastIndexOf('/'));
+
+      // Определяем язык
       const userLang = (navigator.language || navigator.userLanguage).toLowerCase();
-
-      // Определяем папку на основе языка
-      let folder = 'en'; // по умолчанию — английский
-
+      let folder = 'en';
       if (userLang.startsWith('ru')) {
         folder = 'ru';
       } else if (userLang.startsWith('uk') || userLang.startsWith('ua')) {
-        // Украинский язык в браузерах обычно 'uk' (українська), но иногда может быть 'ua'
         folder = 'ua';
       }
 
-      // Перенаправляем
-      window.location.replace(`/${folder}/index.html`);
+      // Формируем полный URL с учётом базового пути
+      const targetUrl = `${window.location.origin}${basePath}/${folder}/index.html`;
+
+      window.location.replace(targetUrl);
     })();
   </script>
 </head>
