@@ -65,29 +65,29 @@ function setupIntersectionObserver() {
 }
 
 // Contact Form Handler
-function setupContactForm() {
+function setupContactForm(lang) {
     const form = document.getElementById('contactForm');
     if (!form) return;
 
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
-        
+
         const submitButton = form.querySelector('button[type="submit"]');
         const originalText = submitButton.textContent;
-        
+
         // Show loading state
         submitButton.textContent = 'Отправляется...';
         submitButton.disabled = true;
-        
+
         // Simulate form submission (replace with actual submission logic)
         setTimeout(() => {
             // Reset form
             form.reset();
-            
+
             // Show success message
             submitButton.textContent = 'Сообщение отправлено!';
             submitButton.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
-            
+
             // Reset button after 3 seconds
             setTimeout(() => {
                 submitButton.textContent = originalText;
@@ -101,11 +101,11 @@ function setupContactForm() {
 // Floating Elements Animation
 function animateFloatingElements() {
     const floatingElements = document.querySelectorAll('.floating-element');
-    
+
     floatingElements.forEach((element, index) => {
         const randomDelay = Math.random() * 2000;
         const randomDuration = 3000 + Math.random() * 2000;
-        
+
         setTimeout(() => {
             element.style.animation = `floatAnimation ${randomDuration}ms ease-in-out infinite`;
         }, randomDelay);
@@ -185,7 +185,7 @@ function setupButtonHandlers() {
     // Hero buttons
     const projectsButton = document.querySelector('.hero-buttons .btn-primary');
     const contactButton = document.querySelector('.hero-buttons .btn-outline');
-    
+
     if (projectsButton) {
         projectsButton.addEventListener('click', () => {
             document.querySelector('.projects-section').scrollIntoView({
@@ -193,7 +193,7 @@ function setupButtonHandlers() {
             });
         });
     }
-    
+
     if (contactButton) {
         contactButton.addEventListener('click', () => {
             document.querySelector('.contact-section').scrollIntoView({
@@ -201,7 +201,7 @@ function setupButtonHandlers() {
             });
         });
     }
-    
+
     // Project buttons (GitHub and Demo)
     const projectButtons = document.querySelectorAll('.project-buttons .btn');
     projectButtons.forEach(button => {
@@ -234,24 +234,40 @@ function setupParallax() {
 
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    // Start animated text
+    // Определяем текущий язык по URL
+    const path = window.location.pathname;
+    let lang = 'en'; // язык по умолчанию
+
+    if (path.includes('/ru/')) {
+        lang = 'ru';
+    } else if (path.includes('/ua/')) {
+        lang = 'ua';
+    }
+
+    // Словарь переводов
+    const animatedTexts = {
+        ru: 'Создаю Telegram боты, микросервисы и автоматизацию',
+        ua: 'Створюю Telegram боти, мікросервіси та автоматизацію',
+        en: 'I build Telegram bots, microservices, and automation tools'
+    };
+
+    // Получаем элемент
     const animatedTextElement = document.getElementById('animated-text');
     if (animatedTextElement) {
         const animatedText = new AnimatedText(
             animatedTextElement,
-            'Создаю Telegram боты, микросервисы и автоматизацию',
+            animatedTexts[lang],
             80
         );
-        
-        // Start animation after a short delay
+
         setTimeout(() => {
             animatedText.start();
         }, 1000);
     }
-    
-    // Setup all other functionality
+
+    // Остальной код
     setupIntersectionObserver();
-    setupContactForm();
+    // setupContactForm(lang);
     addFloatingAnimation();
     animateFloatingElements();
     setupScrollAnimations();
@@ -275,12 +291,12 @@ function throttle(func, wait) {
 // Add smooth hover effects for cards
 document.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelectorAll('.skill-card, .project-card, .contact-card');
-    
+
     cards.forEach(card => {
         card.addEventListener('mouseenter', () => {
             card.style.transform = 'translateY(-5px) scale(1.02)';
         });
-        
+
         card.addEventListener('mouseleave', () => {
             card.style.transform = 'translateY(0) scale(1)';
         });

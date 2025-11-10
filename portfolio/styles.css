@@ -10,35 +10,35 @@
     /* Colors (HSL format) */
     --background: hsl(220, 27%, 4%);
     --foreground: hsl(210, 100%, 98%);
-    
+
     --card: hsl(220, 27%, 6%);
     --card-foreground: hsl(210, 100%, 98%);
-    
+
     --primary: hsl(217, 91%, 60%);
     --primary-foreground: hsl(220, 27%, 4%);
-    
+
     --secondary: hsl(220, 27%, 8%);
     --secondary-foreground: hsl(210, 100%, 98%);
-    
+
     --muted: hsl(220, 27%, 8%);
     --muted-foreground: hsl(220, 9%, 65%);
-    
+
     --accent: hsl(262, 83%, 58%);
     --accent-foreground: hsl(210, 100%, 98%);
-    
+
     --border: hsl(220, 27%, 12%);
-    
+
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(217, 91%, 60%), hsl(262, 83%, 58%));
     --gradient-secondary: linear-gradient(135deg, hsl(220, 27%, 8%), hsl(220, 27%, 12%));
     --gradient-hero: linear-gradient(135deg, hsla(217, 91%, 60%, 0.1), hsla(262, 83%, 58%, 0.1));
     --gradient-text: linear-gradient(135deg, hsl(217, 91%, 70%), hsl(262, 83%, 68%));
-    
+
     /* Shadows and Glows */
     --shadow-primary: 0 0 40px hsla(217, 91%, 60%, 0.3);
     --shadow-accent: 0 0 40px hsla(262, 83%, 58%, 0.3);
     --shadow-elevated: 0 25px 50px -12px hsla(220, 27%, 4%, 0.8);
-    
+
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -50,7 +50,7 @@ body {
     background-color: var(--background);
     color: var(--foreground);
     line-height: 1.6;
-    background-image: 
+    background-image:
         radial-gradient(circle at 20% 80%, hsla(217, 91%, 60%, 0.1) 0%, transparent 50%),
         radial-gradient(circle at 80% 20%, hsla(262, 83%, 58%, 0.1) 0%, transparent 50%);
 }
@@ -62,12 +62,29 @@ body {
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     background: var(--gradient-text);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     font-weight: 700;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+    /* display: block; */
+    vertical-align: middle;
 }
 
 .text-primary {
@@ -522,9 +539,39 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0.25rem;
 }
 
-.contact-action {
+.contact-action-text {
     font-size: 0.875rem;
     color: var(--primary);
+}
+
+.contact-action {
+    display: inline-block;
+    font-size: 0.875rem;
+    color: var(--primary);
+    text-decoration: none;
+    position: relative;
+    transition: var(--transition-smooth);
+    cursor: pointer;
+}
+
+.contact-action::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background: var(--gradient-primary);
+    transition: var(--transition-smooth);
+}
+
+.contact-action:hover {
+    color: var(--accent);
+    transform: translateX(4px);
+}
+
+.contact-action:hover::after {
+    width: 100%;
 }
 
 .services-info {
@@ -532,6 +579,18 @@ h1, h2, h3, h4, h5, h6 {
     background-color: hsla(217, 91%, 60%, 0.05);
     border-radius: 0.5rem;
     border: 1px solid hsla(217, 91%, 60%, 0.2);
+    /* Добавляем плавный переход для анимации */
+    transition: var(--transition-smooth);
+    /* Обязательно: чтобы transform не "дрожал" при анимации */
+    will-change: transform;
+}
+
+.services-info:hover {
+    /* Подсветка border'а нужным цветом */
+    border-color: #3b82f6;
+    /* Например, синий — замените на ваш цвет */
+    /* Сдвиг вправо на 10px (можно изменить) */
+    transform: translateX(10px);
 }
 
 .services-title {
@@ -601,9 +660,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Animations */
 @keyframes pulse {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 1;
     }
+
     50% {
         opacity: 0.5;
     }
@@ -613,6 +675,7 @@ h1, h2, h3, h4, h5, h6 {
     from {
         width: 0;
     }
+
     to {
         width: 100%;
     }
@@ -624,36 +687,36 @@ h1, h2, h3, h4, h5, h6 {
         flex-direction: column;
         align-items: stretch;
     }
-    
+
     .btn {
         width: 100%;
         justify-content: center;
     }
-    
+
     .skills-grid,
     .projects-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .contact-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
-    
+
     .form-row {
         grid-template-columns: 1fr;
     }
-    
+
     .project-title-row {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.5rem;
     }
-    
+
     .project-buttons {
         flex-direction: column;
     }
-    
+
     .floating-1,
     .floating-2,
     .floating-3 {
@@ -665,18 +728,18 @@ h1, h2, h3, h4, h5, h6 {
     .container {
         padding: 0 1rem;
     }
-    
+
     .skills-section,
     .projects-section,
     .contact-section {
         padding: 3rem 1rem;
     }
-    
+
     .skill-card,
     .project-card {
         padding: 1.5rem;
     }
-    
+
     .contact-form {
         padding: 1.5rem;
     }
