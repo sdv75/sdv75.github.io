@@ -1,1 +1,515 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Премиальная мультидисциплинарная клиника в Дубае | Lumière Medical Center</title>
+<meta name="description" content="Современная мультидисциплинарная медицина в Дубае с опытными специалистами, современной диагностикой и персонализированным подходом к каждому пациенту.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon">L</div>
+      Lumière
+    </a>
+    <nav class="nav">
+      <a href="#specialties">Специализации</a>
+      <a href="#doctors">Врачи</a>
+      <a href="#schedule">Расписание</a>
+      <a href="#pricing">Цены</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+    <div class="header-cta">
+      <button class="btn btn-primary" onclick="openBooking()">Записаться на прием</button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu-overlay" id="mobileOverlay"></div>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" id="mobileClose" aria-label="Закрыть меню">✕</button>
+  <a href="#specialties" class="mobile-link">Специализации</a>
+  <a href="#doctors" class="mobile-link">Врачи</a>
+  <a href="#schedule" class="mobile-link">Расписание</a>
+  <a href="#pricing" class="mobile-link">Цены</a>
+  <a href="#reviews" class="mobile-link">Отзывы</a>
+  <a href="#contact" class="mobile-link">Контакты</a>
+  <div style="margin-top: 24px;">
+    <button class="btn btn-primary" style="width:100%;" onclick="openBooking(); closeMobileMenu();">Записаться на прием</button>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-content">
+      <div class="hero-eyebrow">Частная медицина премиум-класса в Дубае</div>
+      <h1 class="hero-title">Исключительная медицина.<br><em>Персональное внимание.</em></h1>
+      <p class="hero-subtitle">Комплексная медицинская помощь в Дубае, объединяющая опытных специалистов, современную диагностику и индивидуальный подход к каждому пациенту.</p>
+      <div class="hero-ctas">
+        <button class="btn btn-primary btn-large" onclick="openBooking()">Записаться на прием →</button>
+        <a href="#doctors" class="btn btn-secondary btn-large">Наши врачи</a>
+        <a href="tel:+97144001234" class="btn btn-call btn-large"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Позвонить</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <span class="trust-value">15+</span>
+          <span class="trust-label">Специализаций</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-value">30+</span>
+          <span class="trust-label">Специалистов</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-value">В тот же день</span>
+          <span class="trust-label">Запись на прием</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-value">4.9/5</span>
+          <span class="trust-label">Рейтинг пациентов</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-image-wrapper">
+        <img src="assets/images/hero-clinic.png" alt="Премиальная медицинская консультация в Lumière Medical Center Дубай">
+      </div>
+      <div class="hero-image-accent"></div>
+      <div class="hero-micro">
+        <div class="hero-micro-icon">🌍</div>
+        <div>
+          <div class="hero-micro-text">Многоязычная команда</div>
+          <div class="hero-micro-sub">Русский · Английский · Арабский</div>
+        </div>
+      </div>
+      <div class="booking-widget">
+        <h3>Найдите своего специалиста</h3>
+        <div class="field">
+          <label>Специализация</label>
+          <select id="widgetSpecialty">
+            <option value="">Выберите специализацию</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Врач</label>
+          <select id="widgetDoctor">
+            <option value="">Выберите врача</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Предпочтительная дата</label>
+          <input type="date" id="widgetDate">
+        </div>
+        <button class="btn btn-primary" onclick="checkAvailability()">Проверить доступность</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPECIALTIES -->
+<section class="section" id="specialties">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Наша экспертиза</span>
+      <h2 class="section-title">Экспертиза на каждом<br>этапе лечения</h2>
+      <p class="section-subtitle">Специализированная медицинская помощь, ориентированная на вас.</p>
+    </div>
+    <div class="specialties-grid" id="specialtiesGrid"></div>
+  </div>
+</section>
+
+<!-- DOCTORS -->
+<section class="section" id="doctors" style="background: var(--bg-secondary);">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Наша команда</span>
+      <h2 class="section-title">Познакомьтесь со специалистами<br>вашего здоровья</h2>
+      <p class="section-subtitle">Врачи с международным образованием и десятилетиями опыта.</p>
+    </div>
+    <div class="doctors-filters-wrapper reveal">
+      <button class="filter-nav-btn" onclick="scrollDeptFilters(-1)" aria-label="Назад">←</button>
+      <div class="doctors-filters" id="doctorFilters"></div>
+      <button class="filter-nav-btn" onclick="scrollDeptFilters(1)" aria-label="Вперед">→</button>
+    </div>
+    <div class="doctors-grid" id="doctorsGrid"></div>
+  </div>
+</section>
+
+<!-- SCHEDULE -->
+<section class="section schedule-section" id="schedule">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Доступность</span>
+      <h2 class="section-title">Выберите удобное<br>для вас время</h2>
+      <p class="section-subtitle">Актуальное расписание всех наших специалистов.</p>
+    </div>
+    <div class="schedule-wrapper reveal">
+      <div class="schedule-header">
+        <div class="schedule-filters">
+          <select id="scheduleSpecialty" onchange="onScheduleSpecialtyChange()">
+            <option value="">Выберите специализацию</option>
+          </select>
+          <select id="scheduleDoctor" onchange="onScheduleDoctorChange()">
+            <option value="">Выберите врача</option>
+          </select>
+        </div>
+      </div>
+      <div class="schedule-days" id="scheduleDays"></div>
+      <div class="schedule-slots" id="scheduleSlots"></div>
+      <div class="schedule-cta">
+        <button class="btn btn-primary btn-large" onclick="continueBooking()">Продолжить запись →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="section booking-section" id="booking">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Онлайн запись</span>
+      <h2 class="section-title">Запланируйте визит</h2>
+      <p class="section-subtitle">Удобная запись на прием в несколько шагов.</p>
+    </div>
+    <div class="booking-wrapper reveal">
+      <div class="booking-progress">
+        <div class="booking-progress-bar" id="progressBar" style="width: 0%"></div>
+        <div class="progress-step active" data-step="1">
+          <div class="progress-step-num">1</div>
+          <div class="progress-step-label">Специализация</div>
+        </div>
+        <div class="progress-step" data-step="2">
+          <div class="progress-step-num">2</div>
+          <div class="progress-step-label">Врач</div>
+        </div>
+        <div class="progress-step" data-step="3">
+          <div class="progress-step-num">3</div>
+          <div class="progress-step-label">Время</div>
+        </div>
+        <div class="progress-step" data-step="4">
+          <div class="progress-step-num">4</div>
+          <div class="progress-step-label">Данные</div>
+        </div>
+        <div class="progress-step" data-step="5">
+          <div class="progress-step-num">5</div>
+          <div class="progress-step-label">Подтверждение</div>
+        </div>
+      </div>
+
+      <!-- Step 1: Specialty -->
+      <div class="booking-step active" data-step="1">
+        <h3>Выберите специализацию</h3>
+        <p>Выберите отделение, соответствующее вашим потребностям.</p>
+        <div class="option-grid" id="bookingSpecialties"></div>
+        <div class="booking-nav">
+          <div></div>
+          <button class="btn btn-primary" onclick="nextStep()">Продолжить →</button>
+        </div>
+      </div>
+
+      <!-- Step 2: Doctor -->
+      <div class="booking-step" data-step="2">
+        <h3>Выберите врача</h3>
+        <p>Выберите специалиста из списка доступных врачей.</p>
+        <div class="option-grid" id="bookingDoctors" style="grid-template-columns: repeat(2, 1fr);"></div>
+        <div class="booking-nav">
+          <button class="btn btn-secondary" onclick="prevStep()">← Назад</button>
+          <button class="btn btn-primary" onclick="nextStep()">Продолжить →</button>
+        </div>
+      </div>
+
+      <!-- Step 3: Date & Time -->
+      <div class="booking-step" data-step="3">
+        <h3>Выберите дату и время</h3>
+        <p>Выберите предпочтительное время приема.</p>
+        <div class="form-grid">
+          <div class="form-group full">
+            <label>Предпочтительная дата <span class="required">*</span></label>
+            <input type="date" id="bookingDate" onchange="onBookingDateChange()">
+            <div class="form-error" id="bookingDateError">Пожалуйста, выберите дату.</div>
+          </div>
+          <div class="form-group full">
+            <label>Доступное время</label>
+            <div class="option-grid" id="bookingTimes" style="grid-template-columns: repeat(4, 1fr);"></div>
+            <div class="form-error" id="bookingTimeError">Пожалуйста, выберите время.</div>
+          </div>
+        </div>
+        <div class="booking-nav">
+          <button class="btn btn-secondary" onclick="prevStep()">← Назад</button>
+          <button class="btn btn-primary" onclick="nextStep()">Продолжить →</button>
+        </div>
+      </div>
+
+      <!-- Step 4: Patient Details -->
+      <div class="booking-step" data-step="4">
+        <h3>Информация о пациенте</h3>
+        <p>Пожалуйста, укажите ваши контактные данные.</p>
+        <div class="form-grid">
+          <div class="form-group">
+            <label>Полное имя <span class="required">*</span></label>
+            <input type="text" id="patientName" placeholder="Введите ваше полное имя">
+            <div class="form-error" id="patientNameError">Пожалуйста, введите ваше полное имя.</div>
+          </div>
+          <div class="form-group">
+            <label>Номер телефона <span class="required">*</span></label>
+            <input type="tel" id="patientPhone" placeholder="+971 XX XXX XXXX">
+            <div class="form-error" id="patientPhoneError">Пожалуйста, введите корректный номер телефона.</div>
+          </div>
+          <div class="form-group full">
+            <label>Электронная почта <span class="required">*</span></label>
+            <input type="email" id="patientEmail" placeholder="your@email.com">
+            <div class="form-error" id="patientEmailError">Пожалуйста, введите корректный email адрес.</div>
+          </div>
+          <div class="form-group full">
+            <label>Причина визита</label>
+            <textarea id="patientReason" rows="3" placeholder="Кратко опишите симптомы или причину визита..."></textarea>
+          </div>
+        </div>
+        <div class="booking-nav">
+          <button class="btn btn-secondary" onclick="prevStep()">← Назад</button>
+          <button class="btn btn-primary" onclick="nextStep()">Продолжить →</button>
+        </div>
+      </div>
+
+      <!-- Step 5: Confirmation -->
+      <div class="booking-step" data-step="5">
+        <h3>Подтвердите запись</h3>
+        <p>Пожалуйста, проверьте данные перед отправкой.</p>
+        <div class="booking-summary" id="bookingSummary"></div>
+        <div class="booking-nav">
+          <button class="btn btn-secondary" onclick="prevStep()">← Назад</button>
+          <button class="btn btn-primary" id="submitBooking" onclick="submitBooking()">Подтвердить запись →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section" id="pricing">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Цены</span>
+      <h2 class="section-title">Прозрачное ценообразование</h2>
+      <p class="section-subtitle">Четкие цены на консультации и медицинские пакеты.</p>
+    </div>
+    <div class="pricing-grid" id="pricingGrid"></div>
+  </div>
+</section>
+
+<!-- TEST PREPARATION -->
+<section class="section" id="tests" style="background: var(--bg-secondary);">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Для пациентов</span>
+      <h2 class="section-title">Подготовьтесь с уверенностью</h2>
+      <p class="section-subtitle">Важные рекомендации по подготовке к медицинским исследованиям.</p>
+    </div>
+    <div class="accordion reveal" id="accordion"></div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section reviews-section" id="reviews">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Отзывы</span>
+      <h2 class="section-title">Нам доверяют пациенты</h2>
+    </div>
+    <div class="reviews-stats reveal">
+      <div class="reviews-rating">4.9</div>
+      <div class="reviews-stars">★★★★★</div>
+      <div class="reviews-count">На основе 1,200+ отзывов пациентов</div>
+    </div>
+    <div class="reviews-carousel reveal">
+      <div class="reviews-track" id="reviewsTrack"></div>
+    </div>
+    <div class="reviews-nav">
+      <button onclick="moveReviews(-1)" aria-label="Предыдущий">←</button>
+      <button onclick="moveReviews(1)" aria-label="Следующий">→</button>
+    </div>
+    <div class="reviews-dots" id="reviewsDots"></div>
+    <div class="reviews-counter" id="reviewsCounter"></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-bg">
+    <img src="assets/images/clinic-interior.jpg" alt="Интерьер Lumière Medical Center">
+  </div>
+  <div class="container cta-content reveal">
+    <h2>Ваше здоровье заслуживает<br>исключительной заботы.</h2>
+    <p>Встретьтесь с нужным специалистом и сделайте первый шаг к лучшему здоровью.</p>
+    <div class="cta-buttons">
+      <button class="btn btn-primary btn-large" onclick="openBooking()">Записаться на прием</button>
+      <a href="tel:+97144001234" class="btn btn-secondary btn-large">📞 Позвонить в клинику</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" id="contact">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <div class="logo-icon">L</div>
+          Lumière
+        </a>
+        <p>Премиальная мультидисциплинарная медицина в Дубае, объединяющая клиническое совершенство с персонализированной заботой о пациентах.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="X"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.41l-5.8-7.58-6.64 7.58H.47l8.6-9.83L0 1.15h7.6l5.24 6.93 6.06-6.93Zm-1.29 19.5h2.04L6.49 3.24H4.3l13.31 17.41Z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Специализации</h4>
+        <ul>
+          <li><a href="#">Кардиология</a></li>
+          <li><a href="#">Неврология</a></li>
+          <li><a href="#">Педиатрия</a></li>
+          <li><a href="#">Дерматология</a></li>
+          <li><a href="#">Ортопедия</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Клиника</h4>
+        <ul>
+          <li><a href="#doctors">Врачи</a></li>
+          <li><a href="#schedule">Расписание</a></li>
+          <li><a href="#pricing">Цены</a></li>
+          <li><a href="#reviews">Отзывы</a></li>
+          <li><a href="#" onclick="openBooking(); return false;">Запись на прием</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Ресурсы</h4>
+        <ul>
+          <li><a href="#tests">Подготовка к анализам</a></li>
+          <li><a href="#">Личный кабинет</a></li>
+          <li><a href="#">Страхование</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Дубай, Объединенные Арабские Эмираты<br>DIFC, Gate Village 08</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>+971 4 400 1234</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>info@lumiere.ae</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Пн–Сб: 08:00–20:00</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 Lumière Medical Center. Все права защищены.</span>
+      <div style="display:flex; gap: 24px;">
+        <a href="#">Политика конфиденциальности</a>
+        <a href="#">Условия использования</a>
+        <a href="#">Медицинский дисклеймер</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- MOBILE STICKY -->
+<div class="mobile-sticky">
+  <a href="tel:+97144001234" class="btn btn-secondary">📞 Позвонить</a>
+  <a href="https://wa.me/97144001234" class="btn btn-secondary" target="_blank">💬 WhatsApp</a>
+  <button class="btn btn-primary" onclick="openBooking()">Записаться</button>
+</div>
+
+<!-- DOCTOR MODAL -->
+<div class="modal-overlay" id="doctorModal">
+  <div class="modal" role="dialog" aria-modal="true">
+    <button class="modal-close" onclick="closeDoctorModal()" aria-label="Закрыть">✕</button>
+    <div id="doctorModalContent"></div>
+  </div>
+</div>
+
+<!-- SUCCESS MODAL -->
+<div class="modal-overlay" id="successModal">
+  <div class="modal" style="max-width: 520px;">
+    <button class="modal-close" onclick="closeSuccessModal()" aria-label="Закрыть">✕</button>
+    <div class="success-modal-content">
+      <div class="success-icon">✓</div>
+      <h2>Запрос на прием получен</h2>
+      <p>Спасибо. Ваш запрос успешно получен. Наш координатор свяжется с вами в ближайшее время для подтверждения записи.</p>
+      <div class="booking-summary" id="successSummary"></div>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <button class="btn btn-primary" style="flex:1;" onclick="closeSuccessModal()">Готово</button>
+        <button class="btn btn-secondary" style="flex:1;" onclick="closeSuccessModal(); openBooking();">Записаться еще</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PRICING INQUIRY MODAL -->
+<div class="modal-overlay" id="pricingModal">
+  <div class="modal" style="max-width: 520px;">
+    <button class="modal-close" onclick="closePricingModal()" aria-label="Закрыть">✕</button>
+    <div style="padding: 40px;">
+      <h2 style="font-family: var(--font-heading); font-size: 24px; margin-bottom: 8px;">Узнать о ценах</h2>
+      <p style="color: var(--text-muted); margin-bottom: 28px; font-size: 15px;">Наша команда ответит в течение 24 часов.</p>
+      <form id="pricingForm" onsubmit="submitPricingForm(event)">
+        <div class="form-group">
+          <label>Полное имя <span class="required">*</span></label>
+          <input type="text" id="pricingName" required>
+          <div class="form-error" id="pricingNameError">Пожалуйста, введите ваше имя.</div>
+        </div>
+        <div class="form-group">
+          <label>Номер телефона <span class="required">*</span></label>
+          <input type="tel" id="pricingPhone" required>
+          <div class="form-error" id="pricingPhoneError">Пожалуйста, введите корректный номер телефона.</div>
+        </div>
+        <div class="form-group">
+          <label>Услуга</label>
+          <select id="pricingService">
+            <option>Общая консультация</option>
+            <option>Консультация специалиста</option>
+            <option>Комплексное обследование</option>
+            <option>Премиум обследование</option>
+            <option>Другое</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Сообщение</label>
+          <textarea id="pricingMessage" rows="3" placeholder="Ваш вопрос..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;" id="pricingSubmitBtn">Отправить запрос</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast-container" id="toastContainer"></div>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
