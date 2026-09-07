@@ -395,7 +395,7 @@ function applyScenario(key){
   lastScenario = key;
   $$('#scenarioChips .sc-chip').forEach(function(c){ c.classList.toggle('active', c.dataset.scenario === key); });
   $$('.p-card').forEach(function(card){ card.classList.toggle('recommended', card.dataset.profile === SCEN_REC[key]); });
-  $('#scenarioResult').innerHTML = '<span>💡</span><span>' + t(SCENARIOS[key]) + '</span>';
+  $('#scenarioResult').innerHTML = '<span class="sc-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><g stroke="#e8630a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 18h5"/><path d="M10.5 21h3"/><path d="M12 3a6 6 0 0 0-3.4 11c.8.6 1.4 1.4 1.4 2.5h4c0-1.1.6-1.9 1.4-2.5A6 6 0 0 0 12 3z"/></g></svg></span><span>' + t(SCENARIOS[key]) + '</span>';
 }
 var PROFILE_DETAILS = {
   basic:   { sub:'prd.basic.sub', rows:[['spec.cameras','3'],['spec.width','60 мм'],['spec.seal','prd.basic.seal'],['spec.furn','prd.basic.furn'],['spec.glass','prd.basic.glass'],['spec.guar','prd.basic.guar'],['spec.who','prd.basic.who']] },
