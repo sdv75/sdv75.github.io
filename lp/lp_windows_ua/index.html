@@ -1,1 +1,650 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Пластиковые окна в Киеве: расчёт стоимости за 2 минуты и бесплатный замер — ТеплоТихо</title>
+<meta name="description" content="Установка пластиковых окон в квартире и доме, остекление балкона и лоджии в Киеве. Онлайн-расчёт стоимости окон за 2 минуты, бесплатный замер в день обращения, фиксированная цена в договоре, аккуратный монтаж за 1 день, гарантия 5 лет.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header" id="header">
+  <div class="wrap header-in">
+    <a href="#" class="logo" aria-label="ТеплоТихо — вікна та засклення">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="3" width="16" height="18" rx="2.5" stroke="#fff" stroke-width="1.8"/><path d="M12 3v18M4 12h16" stroke="#e8630a" stroke-width="1.8"/></svg>
+      </span>
+      тепло<b>тихо</b>
+    </a>
+    <nav class="nav" aria-label="Основная навигация">
+      <a href="#calc" data-i18n="nav.calc">Калькулятор</a>
+      <a href="#profiles" data-i18n="nav.profiles">Профили</a>
+      <a href="#measure" data-i18n="nav.measure">Замер</a>
+      <a href="#promo" data-i18n="nav.promo">Акции</a>
+      <a href="#reviews" data-i18n="nav.reviews">Отзывы</a>
+    </nav>
+    <div class="header-right">
+      <div class="lang-switch" role="group" aria-label="Мова / Язык">
+        <button type="button" data-lang="ru" class="active">RU</button>
+        <button type="button" data-lang="uk">UA</button>
+      </div>
+      <!-- Демо-номер: замените на реальный номер компании -->
+      <a class="header-phone" href="tel:+380671234567">+38 (067) 123-45-67</a>
+      <button class="btn btn-accent btn-sm" data-modal-open="modal-measure" data-i18n="hdr.cta">Бесплатный замер</button>
+      <button class="burger" id="burger" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#calc" data-i18n="nav.calc">Калькулятор</a>
+  <a href="#profiles" data-i18n="nav.profiles">Профили</a>
+  <a href="#measure" data-i18n="nav.measure">Замер</a>
+  <a href="#promo" data-i18n="nav.promo">Акции</a>
+  <a href="#reviews" data-i18n="nav.reviews">Отзывы</a>
+  <a class="mm-phone" href="tel:+380671234567">+38 (067) 123-45-67</a>
+  <button class="btn btn-accent btn-block" data-modal-open="modal-measure" data-i18n="hdr.cta">Бесплатный замер</button>
+</div>
+
+<main>
+<!-- ================= БЛОК 1: HERO ================= -->
+<section class="hero" aria-label="Главное предложение">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-badge"><span class="dot"></span><span data-i18n="hero.badge">Замер и расчёт — 0 грн. Цена фиксируется в договоре</span></div>
+        <h1 data-i18n-html="hero.h1">Тёплые и тихие окна с ценой, которая <em>не меняется</em> после замера</h1>
+        <p class="hero-sub" data-i18n="hero.sub">Пластиковые и алюминиевые окна для квартиры, дома, балкона и лоджии в Киеве. Рассчитайте стоимость онлайн за 2 минуты — замерщик приедет бесплатно в удобное время и зафиксирует цену до гривны.</p>
+        <div class="hero-ctas">
+          <a href="#calc" class="btn btn-accent" data-i18n="hero.cta1">Рассчитать стоимость</a>
+          <button class="btn btn-ghost" data-modal-open="modal-measure" data-i18n="hero.cta2">Вызвать замерщика бесплатно</button>
+        </div>
+        <ul class="hero-points">
+          <li><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="#e5f6ec"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="#1f9d61" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="hero.p1">Бесплатный замер в день обращения или когда удобно вам</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="#e5f6ec"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="#1f9d61" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="hero.p2">Точный расчёт до визита — без «вилки цен» и сюрпризов в смете</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="#e5f6ec"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="#1f9d61" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="hero.p3">Аккуратный монтаж за 1 день с защитой пола и мебели</span></li>
+        </ul>
+      </div>
+      <div class="hero-media reveal">
+        <div class="hero-img">
+          <img src="images/hero.png" alt="Панорамні пластикові вікна в підлогу у світлій вітальні з видом на річку та місто" loading="eager">
+          <span class="hero-tag" data-i18n="hero.tag">Остекление под ключ</span>
+        </div>
+        <div class="hero-card">
+          <div class="hc-label" data-i18n="hero.cardLabel">Окно 1400×1400 мм под ключ</div>
+          <!-- Цена-якорь сверена с формулой калькулятора -->
+          <div class="hc-price" data-i18n-html="hero.cardPrice">от <span>10 200 грн</span></div>
+          <a href="#calc" class="link-accent" data-i18n="hero.cardLink">Рассчитать моё окно →</a>
+        </div>
+      </div>
+    </div>
+    <div class="trust-strip">
+      <div class="trust-item reveal"><span class="trust-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-8" stroke="#e8630a" stroke-width="2" stroke-linecap="round"/><path d="M15 7h6v6" stroke="#e8630a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b data-i18n="t1b">Расчёт за 2 минуты</b><span data-i18n="t1s">онлайн, без звонков</span></div></div>
+      <div class="trust-item reveal"><span class="trust-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="8" width="18" height="12" rx="2" stroke="#e8630a" stroke-width="2"/><path d="M7 8V6a5 5 0 0110 0v2" stroke="#e8630a" stroke-width="2"/></svg></span><div><b data-i18n="t2b">Цена зафиксирована</b><span data-i18n="t2s">в договоре, до монтажа</span></div></div>
+      <div class="trust-item reveal"><span class="trust-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z" stroke="#e8630a" stroke-width="2" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="#e8630a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b data-i18n="t3b">Гарантия 5 лет</b><span data-i18n="t3s">на окна и монтаж</span></div></div>
+      <div class="trust-item reveal"><span class="trust-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#e8630a" stroke-width="2"/><path d="M12 7v5l3.5 2" stroke="#e8630a" stroke-width="2" stroke-linecap="round"/></svg></span><div><b data-i18n="t4b">Монтаж за 1 день</b><span data-i18n="t4s">2–4 часа на одно окно</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= БЛОК 2: КАЛЬКУЛЯТОР ================= -->
+<section id="calc" aria-label="Калькулятор стоимости окон">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow" data-i18n="calc.eyebrow">Онлайн-калькулятор</span>
+      <h2 data-i18n="calc.h2">Узнайте стоимость окон для вашей квартиры за 2 минуты</h2>
+      <p class="section-sub" data-i18n="calc.sub">4 шага — и вы видите предварительную цену с монтажом и опциями. Без звонков «менеджер уточнит» и без скрытых доплат.</p>
+    </div>
+
+    <div class="calc-layout">
+      <div class="calc-card reveal">
+        <div class="calc-progress" id="calcProgress" aria-label="Шаги калькулятора">
+          <div class="cp-step active" data-step="1" data-n="1"><span data-i18n="prog1">Объект</span></div>
+          <div class="cp-step" data-step="2" data-n="2"><span data-i18n="prog2">Размеры</span></div>
+          <div class="cp-step" data-step="3" data-n="3"><span data-i18n="prog3">Профиль и стекло</span></div>
+          <div class="cp-step" data-step="4" data-n="4"><span data-i18n="prog4">Опции</span></div>
+        </div>
+
+        <!-- ШАГ 1 -->
+        <div class="calc-step active" data-step="1">
+          <div class="calc-title" data-i18n="s1.title">Что остекляем?</div>
+          <div class="calc-hint" data-i18n="s1.hint">Выберите тип объекта — от него зависят коэффициенты расчёта.</div>
+          <div class="opt-grid cols4" data-group="object">
+            <label class="opt-card selected"><input type="radio" name="object" value="flat" checked><span class="opt-ico">🏢</span><span class="oc-title" data-i18n="obj.flat">Квартира</span><span class="oc-sub" data-i18n="obj.flat.sub">Замена старых окон, новостройка</span></label>
+            <label class="opt-card"><input type="radio" name="object" value="house"><span class="opt-ico">🏡</span><span class="oc-title" data-i18n="obj.house">Дом</span><span class="oc-sub" data-i18n="obj.house.sub">Коттедж, дача, таунхаус</span></label>
+            <label class="opt-card"><input type="radio" name="object" value="balcony"><span class="opt-ico">🌇</span><span class="oc-title" data-i18n="obj.balcony">Балкон</span><span class="oc-sub" data-i18n="obj.balcony.sub">Остекление под ключ</span></label>
+            <label class="opt-card"><input type="radio" name="object" value="loggia"><span class="opt-ico">🪟</span><span class="oc-title" data-i18n="obj.loggia">Лоджия</span><span class="oc-sub" data-i18n="obj.loggia.sub">Тёплый контур, кабинет</span></label>
+          </div>
+          <div class="count-row">
+            <div>
+              <div class="field-label" data-i18n="s1.count">Количество окон</div>
+              <div class="stepper">
+                <button type="button" id="countMinus" aria-label="−">−</button>
+                <span class="st-val" id="countVal">3</span>
+                <button type="button" id="countPlus" aria-label="+">+</button>
+              </div>
+            </div>
+            <span class="cr-note" data-i18n="s1.countNote">Для балкона и лоджии считаем количество остекляемых конструкций.</span>
+          </div>
+          <div class="calc-nav">
+            <span></span>
+            <button class="btn btn-dark" data-next data-i18n="btn.nextSize">Далее: размеры →</button>
+          </div>
+        </div>
+
+        <!-- ШАГ 2 -->
+        <div class="calc-step" data-step="2">
+          <div class="calc-title" data-i18n="s2.title">Размер и конструкция окна</div>
+          <div class="calc-hint" data-i18n="s2.hint">Двигайте ползунки или выберите типовой размер — этого достаточно для предварительного расчёта.</div>
+          <div class="calc-row">
+            <div>
+              <div class="field-label"><span data-i18n="lbl.width">Ширина, мм</span> <output id="widthOut">1400</output></div>
+              <input type="range" id="widthRange" min="600" max="3200" step="50" value="1400" aria-label="Ширина">
+            </div>
+            <div>
+              <div class="field-label"><span data-i18n="lbl.height">Высота, мм</span> <output id="heightOut">1400</output></div>
+              <input type="range" id="heightRange" min="600" max="2800" step="50" value="1400" aria-label="Высота">
+            </div>
+          </div>
+          <div class="presets" id="sizePresets">
+            <button type="button" class="preset" data-w="1300" data-h="1400" data-i18n="preset1">1300×1400 — типовая панель</button>
+            <button type="button" class="preset" data-w="1400" data-h="1500" data-i18n="preset2">1400×1500 — кирпичный дом</button>
+            <button type="button" class="preset" data-w="2100" data-h="1400" data-i18n="preset3">2100×1400 — балконный блок</button>
+            <button type="button" class="preset" data-w="2400" data-h="2200" data-i18n="preset4">2400×2200 — панорама</button>
+          </div>
+          <div style="margin-top:22px">
+            <div class="field-label" data-i18n="lbl.constr">Тип конструкции</div>
+            <div class="opt-grid" data-group="constr">
+              <label class="opt-card"><input type="radio" name="constr" value="single"><span class="oc-title" data-i18n="con.single">Одностворчатое</span><span class="oc-sub" data-i18n="con.single.sub">Кухня, форточка, маленькая комната</span></label>
+              <label class="opt-card selected"><input type="radio" name="constr" value="double" checked><span class="oc-title" data-i18n="con.double">Двухстворчатое</span><span class="oc-sub" data-i18n="con.double.sub">Самый частый вариант в квартирах</span></label>
+              <label class="opt-card"><input type="radio" name="constr" value="triple"><span class="oc-title" data-i18n="con.triple">Трёхстворчатое</span><span class="oc-sub" data-i18n="con.triple.sub">Гостиная, спальня в широком проёме</span></label>
+              <label class="opt-card"><input type="radio" name="constr" value="block"><span class="oc-title" data-i18n="con.block">Балконный блок</span><span class="oc-sub" data-i18n="con.block.sub">Окно + дверь на балкон</span></label>
+              <label class="opt-card"><input type="radio" name="constr" value="pano"><span class="oc-title" data-i18n="con.pano">Панорамное</span><span class="oc-sub" data-i18n="con.pano.sub">В пол, максимум света</span></label>
+            </div>
+          </div>
+          <div class="calc-nav">
+            <button class="btn btn-ghost" data-prev data-i18n="btn.back">← Назад</button>
+            <button class="btn btn-dark" data-next data-i18n="btn.nextProfile">Далее: профиль →</button>
+          </div>
+        </div>
+
+        <!-- ШАГ 3 -->
+        <div class="calc-step" data-step="3">
+          <div class="calc-title" data-i18n="s3.title">Профиль и стеклопакет</div>
+          <div class="calc-hint" data-i18n="s3.hint">Не хотите разбираться в характеристиках? Оставьте «Комфорт» и «Энергосберегающий» — это выбор 8 из 10 наших клиентов.</div>
+          <div class="field-label" data-i18n="lbl.profile">Профиль</div>
+          <div class="opt-grid" data-group="profile">
+            <label class="opt-card"><input type="radio" name="profile" value="basic"><span class="oc-title" data-i18n="prof.basic">Базовый</span><span class="oc-sub" data-i18n="prof.basic.sub">3 камеры, 60 мм</span><span class="oc-price" data-i18n="prof.basic.tag">дача, аренда</span></label>
+            <label class="opt-card selected"><input type="radio" name="profile" value="comfort" checked><span class="oc-title" data-i18n="prof.comfort">Комфорт</span><span class="oc-sub" data-i18n="prof.comfort.sub">5 камер, 70 мм</span><span class="oc-price" data-i18n="prof.comfort.tag">квартира, дом</span></label>
+            <label class="opt-card"><input type="radio" name="profile" value="premium"><span class="oc-title" data-i18n="prof.premium">Premium</span><span class="oc-sub" data-i18n="prof.premium.sub">6 камер, 82 мм</span><span class="oc-price" data-i18n="prof.premium.tag">панорамы, тишина</span></label>
+          </div>
+          <div class="field-label" style="margin-top:20px" data-i18n="lbl.glass">Стеклопакет</div>
+          <div class="opt-grid cols4" data-group="glass">
+            <label class="opt-card"><input type="radio" name="glass" value="standard"><span class="oc-title" data-i18n="glass.standard">Стандарт</span><span class="oc-sub" data-i18n="glass.standard.sub">2 камеры, базовая теплоизоляция</span></label>
+            <label class="opt-card selected"><input type="radio" name="glass" value="energy" checked><span class="oc-title" data-i18n="glass.energy">Энергосберегающий</span><span class="oc-sub" data-i18n="glass.energy.sub">Держит тепло зимой, до −30% потерь</span></label>
+            <label class="opt-card"><input type="radio" name="glass" value="noise"><span class="oc-title" data-i18n="glass.noise">Шумоизоляционный</span><span class="oc-sub" data-i18n="glass.noise.sub">Триплекс + разная толщина стёкол</span></label>
+            <label class="opt-card"><input type="radio" name="glass" value="multi"><span class="oc-title" data-i18n="glass.multi">Мультифункциональный</span><span class="oc-sub" data-i18n="glass.multi.sub">Тепло зимой, прохлада летом</span></label>
+          </div>
+          <div class="calc-nav">
+            <button class="btn btn-ghost" data-prev data-i18n="btn.back">← Назад</button>
+            <button class="btn btn-dark" data-next data-i18n="btn.nextOpts">Далее: опции →</button>
+          </div>
+        </div>
+
+        <!-- ШАГ 4 -->
+        <div class="calc-step" data-step="4">
+          <div class="calc-title" data-i18n="s4.title">Дополнительные опции</div>
+          <div class="calc-hint" data-i18n="s4.hint">Отметьте нужное — цена пересчитается сразу. Демонтаж и монтаж можно добавить или убрать.</div>
+          <div class="opt-grid cols4" data-group="opts">
+            <label class="opt-card"><input type="checkbox" name="opt" value="mesh"><span class="opt-ico">🕸️</span><span class="oc-title" data-i18n="opt.mesh">Москитная сетка</span><span class="oc-price" data-i18n="opt.mesh.price">+900 грн / окно</span></label>
+            <label class="opt-card selected"><input type="checkbox" name="opt" value="sill" checked><span class="opt-ico">▭</span><span class="oc-title" data-i18n="opt.sill">Подоконник</span><span class="oc-price" data-i18n="opt.sill.price">от 1 200 грн / окно</span></label>
+            <label class="opt-card selected"><input type="checkbox" name="opt" value="slopes" checked><span class="opt-ico">📐</span><span class="oc-title" data-i18n="opt.slopes">Откосы</span><span class="oc-price" data-i18n="opt.slopes.price">тёплые, сэндвич-панель</span></label>
+            <label class="opt-card"><input type="checkbox" name="opt" value="demo"><span class="opt-ico">🧰</span><span class="oc-title" data-i18n="opt.demo">Демонтаж старых окон</span><span class="oc-price" data-i18n="opt.demo.price">+1 100 грн / окно, вывоз мусора</span></label>
+            <label class="opt-card selected"><input type="checkbox" name="opt" value="delivery" checked><span class="opt-ico">🚚</span><span class="oc-title" data-i18n="opt.delivery">Доставка</span><span class="oc-price" data-i18n="opt.delivery.price">бесплатно от 3 окон</span></label>
+            <label class="opt-card selected"><input type="checkbox" name="opt" value="mount" checked><span class="opt-ico">🛠️</span><span class="oc-title" data-i18n="opt.mount">Монтаж под ключ</span><span class="oc-price" data-i18n="opt.mount.price">1 000 грн / м², бригада с опытом 5+ лет</span></label>
+          </div>
+          <div class="calc-nav">
+            <button class="btn btn-ghost" data-prev data-i18n="btn.back">← Назад</button>
+            <button class="btn btn-accent" data-modal-open="modal-calc" data-i18n="btn.calcCta">Получить точный расчёт бесплатно</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- СВОДКА -->
+      <aside class="calc-summary reveal" aria-live="polite">
+        <div class="cs-title" data-i18n="sum.title">Ваш предварительный расчёт</div>
+        <div class="cs-lines">
+          <div class="cs-line"><span data-i18n="sum.object">Объект</span><b id="sumObject">Квартира</b></div>
+          <div class="cs-line"><span data-i18n="sum.constr">Конструкции</span><b id="sumCount">3 окна</b></div>
+          <div class="cs-line"><span data-i18n="sum.size">Размер</span><b id="sumSize">1400 × 1400 мм</b></div>
+          <div class="cs-line"><span data-i18n="sum.profile">Профиль</span><b id="sumProfile">Комфорт</b></div>
+          <div class="cs-line"><span data-i18n="sum.glass">Стеклопакет</span><b id="sumGlass">Энергосберегающий</b></div>
+          <div class="cs-line"><span data-i18n="sum.opts">Опции</span><b id="sumOpts">4 выбрано</b></div>
+        </div>
+        <div class="cs-divider"></div>
+        <div class="cs-total-label" data-i18n="sum.totalLabel">Предварительная стоимость</div>
+        <div class="cs-total"><span id="sumTotal">0</span> <small data-i18n="cur">грн</small></div>
+        <div class="cs-break">
+          <span id="sumBreak1">Конструкции: 0 грн</span>
+          <span id="sumBreak2">Опции и работы: 0 грн</span>
+          <span id="sumPerWindow">≈ 0 грн за одну конструкцию</span>
+        </div>
+        <button class="btn btn-accent btn-block cs-cta" data-modal-open="modal-calc" data-i18n="btn.calcCta">Получить точный расчёт бесплатно</button>
+        <button class="btn btn-block cs-link" data-modal-open="modal-measure" data-i18n="hero.cta2">Вызвать замерщика бесплатно</button>
+        <p class="cs-note" data-i18n-html="sum.note">Точная стоимость определяется после бесплатного замера. Цена из расчёта <b>фиксируется в договоре</b> и не меняется после монтажа.</p>
+      </aside>
+    </div>
+    <p class="calc-foot-note" data-i18n="calc.footNote">Расчёт предварительный и не является публичной офертой. Итоговая смета — после бесплатного замера, без обязательств.</p>
+  </div>
+</section>
+
+<!-- ================= БЛОК 3: СРАВНЕНИЕ ПРОФИЛЕЙ ================= -->
+<section id="profiles" aria-label="Сравнение профилей">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow" data-i18n="pr.eyebrow">Подбор профиля</span>
+      <h2 data-i18n="pr.h2">Какой профиль подойдёт именно вам — без технических дебрей</h2>
+      <p class="section-sub" data-i18n="pr.sub">Мы сравнили три линейки по главному: тепло, тишина и где они реально нужны. Выберите свою ситуацию — подскажем подходящий вариант.</p>
+    </div>
+
+    <div class="scenario-bar reveal">
+      <div class="sb-title">💡 <span data-i18n="pr.switcher">Что лучше выбрать?</span></div>
+      <div class="scenario-chips" id="scenarioChips">
+        <button class="sc-chip active" data-scenario="road" data-i18n="sc.road">Квартира у шумной дороги</button>
+        <button class="sc-chip" data-scenario="quiet" data-i18n="sc.quiet">Спокойный район, обычный ремонт</button>
+        <button class="sc-chip" data-scenario="house" data-i18n="sc.house">Частный дом, живём круглый год</button>
+        <button class="sc-chip" data-scenario="dacha" data-i18n="sc.dacha">Дача или квартира под сдачу</button>
+        <button class="sc-chip" data-scenario="pano" data-i18n="sc.pano">Панорамные окна / лоджия-кабинет</button>
+      </div>
+      <div class="scenario-result" id="scenarioResult"></div>
+    </div>
+
+    <div class="profile-grid">
+      <article class="p-card reveal" data-profile="basic">
+        <span class="p-rec-badge" data-i18n="pr.recBadge">Подходит для вашей задачи</span>
+        <div class="p-name" data-i18n="prof.basic">Базовый</div>
+        <div class="p-for" data-i18n="pr.for.basic">Дача, нежилые помещения, квартиры под сдачу и стандартные задачи без повышенных требований.</div>
+        <div class="p-price"><span data-i18n="pr.pricePre">окно 1400×1400 от</span> <b>8 200 грн</b></div>
+        <div class="p-rows">
+          <div class="p-row"><span data-i18n="spec.cameras">Камеры профиля</span><b>3</b></div>
+          <div class="p-row"><span data-i18n="spec.width">Ширина профиля</span><b>60 мм</b></div>
+          <div class="p-row"><span data-i18n="spec.use">Применение</span><b data-i18n="pr.useV.basic">дача, аренда, хозпомещения</b></div>
+        </div>
+        <div class="p-bars">
+          <div><div class="p-bar-label"><span data-i18n="bar.heat">Теплоизоляция</span><span>60%</span></div><div class="p-bar"><i data-w="60"></i></div></div>
+          <div><div class="p-bar-label"><span data-i18n="bar.noise">Шумоизоляция</span><span>55%</span></div><div class="p-bar"><i data-w="55"></i></div></div>
+          <div><div class="p-bar-label"><span data-i18n="bar.energy">Энергосбережение</span><span>50%</span></div><div class="p-bar"><i data-w="50"></i></div></div>
+        </div>
+        <div class="p-actions">
+          <button class="btn btn-ghost btn-sm" data-use-profile="basic" data-i18n="pr.useProfile">Рассчитать с этим профилем</button>
+          <button class="p-more" data-profile-detail="basic" data-i18n="pr.more">Подробнее о характеристиках</button>
+        </div>
+      </article>
+
+      <article class="p-card reveal recommended" data-profile="comfort">
+        <span class="p-rec-badge" data-i18n="pr.recBadge">Подходит для вашей задачи</span>
+        <div class="p-name" data-i18n="prof.comfort">Комфорт</div>
+        <div class="p-for" data-i18n="pr.for.comfort">Квартиры и дома для постоянного проживания: баланс цены, тепла и тишины.</div>
+        <div class="p-price"><span data-i18n="pr.pricePre">окно 1400×1400 от</span> <b>11 300 грн</b></div>
+        <div class="p-rows">
+          <div class="p-row"><span data-i18n="spec.cameras">Камеры профиля</span><b>5</b></div>
+          <div class="p-row"><span data-i18n="spec.width">Ширина профиля</span><b>70 мм</b></div>
+          <div class="p-row"><span data-i18n="spec.use">Применение</span><b data-i18n="pr.useV.comfort">квартира, дом, ПМЖ</b></div>
+        </div>
+        <div class="p-bars">
+          <div><div class="p-bar-label"><span data-i18n="bar.heat">Теплоизоляция</span><span>82%</span></div><div class="p-bar"><i data-w="82"></i></div></div>
+          <div><div class="p-bar-label"><span data-i18n="bar.noise">Шумоизоляция</span><span>76%</span></div><div class="p-bar"><i data-w="76"></i></div></div>
+          <div><div class="p-bar-label"><span data-i18n="bar.energy">Энергосбережение</span><span>80%</span></div><div class="p-bar"><i data-w="80"></i></div></div>
+        </div>
+        <div class="p-actions">
+          <button class="btn btn-accent btn-sm" data-use-profile="comfort" data-i18n="pr.useProfile">Рассчитать с этим профилем</button>
+          <button class="p-more" data-profile-detail="comfort" data-i18n="pr.more">Подробнее о характеристиках</button>
+        </div>
+      </article>
+
+      <article class="p-card reveal" data-profile="premium">
+        <span class="p-rec-badge" data-i18n="pr.recBadge">Подходит для вашей задачи</span>
+        <div class="p-name">Premium</div>
+        <div class="p-for" data-i18n="pr.for.premium">Большие окна, панорамное остекление, дома и повышенные требования к тепло- и шумоизоляции.</div>
+        <div class="p-price"><span data-i18n="pr.pricePre">окно 1400×1400 от</span> <b>16 000 грн</b></div>
+        <div class="p-rows">
+          <div class="p-row"><span data-i18n="spec.cameras">Камеры профиля</span><b>6</b></div>
+          <div class="p-row"><span data-i18n="spec.width">Ширина профиля</span><b>82 мм</b></div>
+          <div class="p-row"><span data-i18n="spec.use">Применение</span><b data-i18n="pr.useV.premium">панорамы, дома, трассы</b></div>
+        </div>
+        <div class="p-bars">
+          <div><div class="p-bar-label"><span data-i18n="bar.heat">Теплоизоляция</span><span>96%</span></div><div class="p-bar"><i data-w="96"></i></div></div>
+          <div><div class="p-bar-label"><span data-i18n="bar.noise">Шумоизоляция</span><span>93%</span></div><div class="p-bar"><i data-w="93"></i></div></div>
+          <div><div class="p-bar-label"><span data-i18n="bar.energy">Энергосбережение</span><span>95%</span></div><div class="p-bar"><i data-w="95"></i></div></div>
+        </div>
+        <div class="p-actions">
+          <button class="btn btn-ghost btn-sm" data-use-profile="premium" data-i18n="pr.useProfile">Рассчитать с этим профилем</button>
+          <button class="p-more" data-profile-detail="premium" data-i18n="pr.more">Подробнее о характеристиках</button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= БЛОК 4: БЕСПЛАТНЫЙ ЗАМЕР ================= -->
+<section id="measure" aria-label="Бесплатный замер">
+  <div class="measure-layout">
+    <div class="measure-media">
+      <img src="images/measure.png" alt="Світла вітальня з панорамними пластиковими вікнами в підлогу, тепле сонячне світло" loading="lazy">
+    </div>
+    <div class="measure-content reveal">
+      <span class="eyebrow" style="color:#f59a4b" data-i18n="ms.eyebrow">Бесплатный замер</span>
+      <h2 data-i18n="ms.h2">Не угадывайте размеры — специалист приедет и всё измерит бесплатно</h2>
+      <p class="section-sub" data-i18n="ms.sub">Проём в панельном доме и в сталинке отличается на сантиметры. Ошибка в замерах = окно, которое не встаёт. Поэтому замеры мы берём на себя — и отвечаем за них гривной в договоре.</p>
+      <div class="measure-list">
+        <div class="m-item"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="rgba(232,99,10,.2)"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="#f59a4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b data-i18n="ms.i1b">Выезд 0 грн</b><span data-i18n="ms.i1s">в день обращения или в удобное время</span></div></div>
+        <div class="m-item"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="rgba(232,99,10,.2)"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="#f59a4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b data-i18n="ms.i2b">Замер с точностью до мм</b><span data-i18n="ms.i2s">лазерный инструмент, проверка геометрии</span></div></div>
+        <div class="m-item"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="rgba(232,99,10,.2)"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="#f59a4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b data-i18n="ms.i3b">Подбор профиля</b><span data-i18n="ms.i3s">под ваш дом, этаж и сторону света</span></div></div>
+        <div class="m-item"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="rgba(232,99,10,.2)"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="#f59a4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b data-i18n="ms.i4b">Смета на месте</b><span data-i18n="ms.i4s">цена фиксируется и не растёт</span></div></div>
+        <div class="m-item"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="rgba(232,99,10,.2)"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="#f59a4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b data-i18n="ms.i5b">Консультация</b><span data-i18n="ms.i5s">объясним без терминов, что нужно именно вам</span></div></div>
+        <div class="m-item"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="rgba(232,99,10,.2)"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="#f59a4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b data-i18n="ms.i6b">Без обязательств</b><span data-i18n="ms.i6s">замер бесплатный, даже если не закажете</span></div></div>
+      </div>
+      <div class="measure-stats">
+        <div class="mstat"><b><span data-counter="0">0</span> <span data-i18n="cur">грн</span></b><span data-i18n="ms.stat1">замер и расчёт</span></div>
+        <div class="mstat"><b><span data-counter="2">0</span> <span data-i18n="ms.unit.min">мин</span></b><span data-i18n="ms.stat2">онлайн-расчёт</span></div>
+        <div class="mstat"><b><span data-counter="1">0</span> <span data-i18n="ms.unit.day">день</span></b><span data-i18n="ms.stat3">стандартный монтаж</span></div>
+        <div class="mstat"><b><span data-counter="5">0</span> <span data-i18n="ms.unit.years">лет</span></b><span data-i18n="ms.stat4">гарантия по договору</span></div>
+      </div>
+      <button class="btn btn-accent" data-modal-open="modal-measure" data-i18n="hero.cta2">Вызвать замерщика бесплатно</button>
+      <p class="measure-note" data-i18n="ms.note">Продувает старые окна, слышен шум или появляется конденсат? Замерщик подскажет, что решает замена, а что — регулировка фурнитуры. Честно.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= БЛОК 5: СРОКИ МОНТАЖА ================= -->
+<section id="steps" aria-label="Этапы работы и сроки">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center;max-width:680px;margin:0 auto">
+      <span class="eyebrow" data-i18n="st.eyebrow">Что происходит после заявки</span>
+      <h2 data-i18n="st.h2">6 понятных этапов — от заявки до проверки результата</h2>
+      <p class="section-sub" style="margin:14px auto 0" data-i18n="st.sub">Никаких «ждите звонка когда-нибудь». Вы всегда знаете, на каком этапе ваш заказ и сколько он займёт.</p>
+    </div>
+    <div class="timeline reveal">
+      <div class="tl-track">
+        <div class="tl-step"><div class="tl-num">1</div><div><b data-i18n="st1b">Заявка</b><p data-i18n="st1p">Оставляете онлайн-расчёт или заявку на замер. Перезваниваем в течение 15 минут в рабочее время.</p><span class="tl-time" data-i18n="st1t">2 минуты</span></div></div>
+        <div class="tl-step"><div class="tl-num">2</div><div><b data-i18n="st2b">Бесплатный замер</b><p data-i18n="st2p">Специалист приезжает в удобное окно времени, измеряет проёмы и смотрит условия монтажа.</p><span class="tl-time" data-i18n="st2t">в день обращения</span></div></div>
+        <div class="tl-step"><div class="tl-num">3</div><div><b data-i18n="st3b">Расчёт и договор</b><p data-i18n="st3p">Фиксируем смету до гривны: профиль, стеклопакет, опции, работы. Цена после этого не меняется.</p><span class="tl-time" data-i18n="st3t">1 день</span></div></div>
+        <div class="tl-step"><div class="tl-num">4</div><div><b data-i18n="st4b">Изготовление</b><p data-i18n="st4p">Конструкции производятся на заводе под ваши размеры. Статус заказа присылаем в мессенджер.</p><span class="tl-time" data-i18n="st4t">5–7 рабочих дней</span></div></div>
+        <div class="tl-step"><div class="tl-num">5</div><div><b data-i18n="st5b">Монтаж</b><p data-i18n="st5p">Бригада укрывает пол и мебель, аккуратно демонтирует старое и ставит новое окно за один визит.</p><span class="tl-time" data-i18n="st5t">2–4 часа / окно</span></div></div>
+        <div class="tl-step"><div class="tl-num">6</div><div><b data-i18n="st6b">Проверка результата</b><p data-i18n="st6p">Регулируем фурнитуру, проверяем створки и уплотнители, выдаём паспорт и гарантию 5 лет.</p><span class="tl-time" data-i18n="st6t">в день монтажа</span></div></div>
+      </div>
+    </div>
+
+    <div class="install-qa reveal">
+      <div class="qa-item">
+        <button class="qa-head" aria-expanded="false"><span data-i18n="qa1h">Сколько времени занимает установка?</span><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="qa-body"><div class="qa-body-in" data-i18n-html="qa1b">Стандартная установка одного окна обычно занимает <b>2–4 часа</b>: демонтаж, монтаж, запенивание, регулировка. Квартира из 3 окон с откосами и подоконниками — <b>один рабочий день</b>. Точный срок зависит от количества конструкций, состояния проёмов и сложности монтажа — замерщик называет его сразу на замере.</div></div>
+      </div>
+      <div class="qa-item">
+        <button class="qa-head" aria-expanded="false"><span data-i18n="qa2h">Не повредят ли ремонт и мебель?</span><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="qa-body"><div class="qa-body-in" data-i18n="qa2b">Перед началом работ бригада укрывает пол и мебель плёнкой, мебель отодвигает и укутывает. Мусор от демонтажа выносим в пакетах и увозим с собой. После монтажа пылесосим рабочую зону — вам остаётся только проверить результат.</div></div>
+      </div>
+      <div class="qa-item">
+        <button class="qa-head" aria-expanded="false"><span data-i18n="qa3h">Что если цена после замера изменится?</span><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="qa-body"><div class="qa-body-in" data-i18n="qa3b">Не изменится. Смета фиксируется в договоре после замера и действует до конца монтажа. Доплатить можно только одно — если вы сами добавите опции после подписания договора (например, решите поставить москитные сетки на все окна).</div></div>
+      </div>
+    </div>
+    <div class="timeline-cta reveal">
+      <button class="btn btn-accent" data-modal-open="modal-deadline" data-i18n="st.cta">Рассчитать сроки для моего объекта</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= БЛОК 6: АКЦИЯ ================= -->
+<section id="promo" aria-label="Акция недели">
+  <div class="wrap">
+    <div class="promo-in reveal">
+      <div>
+        <span class="promo-label" data-i18n="pm.label">Предложение недели</span>
+        <h2 data-i18n-html="pm.h2">Закажите замер до воскресенья — <em>энергосберегающее стекло по цене обычного</em> и москитная сетка в подарок</h2>
+        <ul class="promo-list">
+          <li><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="rgba(232,99,10,.25)"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="#f59a4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="pm.l1">Апгрейд стеклопакета до энергосберегающего — 0 грн вместо доплаты</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="rgba(232,99,10,.25)"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="#f59a4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="pm.l2">Москитная сетка на каждое открывающееся окно — в подарок</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="rgba(232,99,10,.25)"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="#f59a4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="pm.l3">Замер, доставка от 3 окон и консультация — бесплатно, как всегда</span></li>
+        </ul>
+        <button class="btn btn-accent" data-modal-open="modal-promo" data-i18n="pm.cta">Забрать предложение</button>
+      </div>
+      <div class="promo-card">
+        <div class="pc-title" data-i18n="pm.cardTitle">Предложение действует до конца недели</div>
+        <div class="countdown" id="countdown" aria-label="До конца акции">
+          <div class="cd-tile"><div class="cd-num" id="cdD">00</div><div class="cd-lab" data-i18n="cd.d">дней</div></div>
+          <div class="cd-tile"><div class="cd-num" id="cdH">00</div><div class="cd-lab" data-i18n="cd.h">часов</div></div>
+          <div class="cd-tile"><div class="cd-num" id="cdM">00</div><div class="cd-lab" data-i18n="cd.m">минут</div></div>
+          <div class="cd-tile"><div class="cd-num" id="cdS">00</div><div class="cd-lab" data-i18n="cd.s">секунд</div></div>
+        </div>
+        <button class="btn btn-light btn-block" data-modal-open="modal-promo" data-i18n="pm.cta">Забрать предложение</button>
+        <p class="pc-note" data-i18n="pm.note">Условия фиксируются при заявке до конца воскресенья. Действует на заказы с замером в течение 14 дней.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= БЛОК 7: ОТЗЫВЫ ================= -->
+<section id="reviews" aria-label="Отзывы клиентов">
+  <div class="wrap">
+    <div class="rev-head reveal">
+      <div>
+        <span class="eyebrow" data-i18n="rv.eyebrow">Отзывы</span>
+        <h2 data-i18n="rv.h2">Что говорят после монтажа</h2>
+        <p class="section-sub" data-i18n="rv.sub">Реальные истории замены окон и остекления балконов в Киеве: что было до, что стало после.</p>
+      </div>
+      <div class="rev-nav">
+        <button class="rev-btn" id="revPrev" aria-label="Предыдущий отзыв"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M12 4l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <button class="rev-btn" id="revNext" aria-label="Следующий отзыв"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M8 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </div>
+    </div>
+    <div class="rev-viewport reveal" id="revViewport">
+      <div class="rev-track" id="revTrack">
+        <article class="review-card">
+          <div class="rc-top"><span class="rc-avatar" style="background:#e8630a">МК</span><div><div class="rc-name" data-i18n="rev1.name">Марина Коваленко</div><div class="rc-meta" data-i18n="rev1.meta">Киев, Оболонь</div></div></div>
+          <div class="rc-stars" aria-label="5/5">★★★★★</div>
+          <p class="rc-text" data-i18n="rev1.text">После установки в спальне стало заметно тише, особенно вечером — проспект под окнами больше не будит. Отдельно спасибо, что монтажники аккуратно сняли старые рамы и не повредили укосы, которых я боялась больше всего.</p>
+          <span class="rc-tag" data-i18n="rev1.tag">3 окна в квартире, профиль Комфорт</span>
+        </article>
+        <article class="review-card">
+          <div class="rc-top"><span class="rc-avatar" style="background:#2f6f4f">СА</span><div><div class="rc-name" data-i18n="rev2.name">Сергей Абрамов</div><div class="rc-meta" data-i18n="rev2.meta">Киев, Святошино</div></div></div>
+          <div class="rc-stars" aria-label="5/5">★★★★★</div>
+          <p class="rc-text" data-i18n="rev2.text">Остекляли дом под Киевом, 9 окон плюс панорама в гостиной. Понравилось, что смета после замера совпала с итоговой до гривны: я сверял. Уложились в обещанные 7 дней изготовления, монтаж занял два дня.</p>
+          <span class="rc-tag" data-i18n="rev2.tag">Остекление дома, 9 конструкций</span>
+        </article>
+        <article class="review-card">
+          <div class="rc-top"><span class="rc-avatar" style="background:#7a4de0">АЛ</span><div><div class="rc-name" data-i18n="rev3.name">Алёна Литвиненко</div><div class="rc-meta" data-i18n="rev3.meta">Киев, Позняки</div></div></div>
+          <div class="rc-stars" aria-label="5/5">★★★★★</div>
+          <p class="rc-text" data-i18n="rev3.text">Зимой на лоджии было +8, теперь держится +19 даже без обогревателя. Конденсат пропал полностью. Замерщик честно отговорил от панорамы в пол — сказал, что с нашим парапетом будет холодно, и предложил рабочий вариант.</p>
+          <span class="rc-tag" data-i18n="rev3.tag">Тёплое остекление лоджии</span>
+        </article>
+        <article class="review-card">
+          <div class="rc-top"><span class="rc-avatar" style="background:#0f7fa8">ДС</span><div><div class="rc-name" data-i18n="rev4.name">Дмитрий Соколов</div><div class="rc-meta" data-i18n="rev4.meta">Киев, Осокорки</div></div></div>
+          <div class="rc-stars" aria-label="4/5">★★★★<span class="off">★</span></div>
+          <p class="rc-text" data-i18n="rev4.text">Считал стоимость в калькуляторе вечером, утром перезвонили и подтвердили цифру с точностью до пары тысяч — это подкупило. Звезду снял за перенос монтажа на день из-за погоды, но предупредили заранее, так что без претензий.</p>
+          <span class="rc-tag" data-i18n="rev4.tag">Балконный блок + окно кухни</span>
+        </article>
+        <article class="review-card">
+          <div class="rc-top"><span class="rc-avatar" style="background:#b0483d">ОП</span><div><div class="rc-name" data-i18n="rev5.name">Ольга Петровна</div><div class="rc-meta" data-i18n="rev5.meta">Киев, Печерск</div></div></div>
+          <div class="rc-stars" aria-label="5/5">★★★★★</div>
+          <p class="rc-text" data-i18n="rev5.text">Дому 1962 года, проёмы кривые, я боялась, что разворотят полстены. Обошлось аккуратным демонтажем, всё закрыли плёнкой, пыль не разлетелась по квартире. Ручки ходят мягко, зимой впервые за годы не дуло из-под подоконника.</p>
+          <span class="rc-tag" data-i18n="rev5.tag">2 окна в старом фонде, демонтаж + откосы</span>
+        </article>
+        <article class="review-card">
+          <div class="rc-top"><span class="rc-avatar" style="background:#3c4046">ИГ</span><div><div class="rc-name" data-i18n="rev6.name">Игорь Гарин</div><div class="rc-meta" data-i18n="rev6.meta">Киев, Виноградарь</div></div></div>
+          <div class="rc-stars" aria-label="5/5">★★★★★</div>
+          <p class="rc-text" data-i18n="rev6.text">Квартира окнами на оживлённую развязку, спали с закрытыми форточками и всё равно слышали гул. Взяли Комфорт с шумоизоляционным пакетом по совету замерщика. Разница ощутимая: гул превратился в тихий фон, который ночью не слышен вообще.</p>
+          <span class="rc-tag" data-i18n="rev6.tag">4 окна, шумоизоляционный стеклопакет</span>
+        </article>
+      </div>
+    </div>
+    <div class="rev-dots" id="revDots" aria-label="Страницы отзывов"></div>
+  </div>
+</section>
+
+<!-- ================= БЛОК 8: ФИНАЛЬНЫЙ CTA ================= -->
+<section id="final" aria-label="Финальное предложение">
+  <div class="wrap">
+    <div class="final-in reveal">
+      <img src="images/final.png" alt="Тиха спальня з теплим вікном уночі, дощ за склом" loading="lazy">
+      <div class="final-content">
+        <h2 data-i18n="fn.h2">Узнайте, сколько будут стоить окна именно для вашей квартиры</h2>
+        <p data-i18n="fn.p">Рассчитаем стоимость, подберём профиль и стеклопакет под ваш дом и бесплатно приедем на замер в удобное время.</p>
+        <div class="final-ctas">
+          <a href="#calc" class="btn btn-accent" data-i18n="hero.cta1">Рассчитать стоимость</a>
+          <button class="btn btn-light" data-modal-open="modal-measure" data-i18n="fn.cta2">Вызвать замерщика</button>
+        </div>
+        <div class="final-note" data-i18n="fn.note">Замер ни к чему не обязывает · Цена фиксируется в договоре · Гарантия 5 лет</div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="#" class="logo"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="3" width="16" height="18" rx="2.5" stroke="#fff" stroke-width="1.8"/><path d="M12 3v18M4 12h16" stroke="#e8630a" stroke-width="1.8"/></svg></span>тепло<b>тихо</b></a>
+        <p data-i18n="ft.desc">Пластиковые и алюминиевые окна, остекление балконов и лоджий под ключ в Киеве. Производство, доставка, монтаж, гарантия.</p>
+        <!-- Демо-реквизиты: замените на реальные данные компании -->
+        <p style="font-size:12px;color:#7c8087" data-i18n="ft.legal">ООО «ТеплоТихо» · код ЕГРПОУ 45871236</p>
+      </div>
+      <div>
+        <h4 data-i18n="ft.contacts">Контакты</h4>
+        <a href="tel:+380671234567">+38 (067) 123-45-67</a>
+        <p data-i18n="ft.address">Киев, ул. Большая Васильковская, 72 — шоурум</p>
+        <p data-i18n="ft.hours1">Ежедневно 9:00–21:00</p>
+        <p data-i18n="ft.hours2">Замер: ежедневно 8:00–22:00</p>
+      </div>
+      <div>
+        <h4 data-i18n="ft.nav">Навигация</h4>
+        <a href="#calc" data-i18n="nav.calc">Калькулятор</a>
+        <a href="#profiles" data-i18n="nav.profiles">Профили</a>
+        <a href="#measure" data-i18n="nav.measure">Замер</a>
+        <a href="#promo" data-i18n="nav.promo">Акции</a>
+        <a href="#reviews" data-i18n="nav.reviews">Отзывы</a>
+      </div>
+      <div>
+        <h4 data-i18n="ft.docs">Документы</h4>
+        <a href="#" data-doc="privacy" data-i18n="ft.privacy">Политика конфиденциальности</a>
+        <a href="#" data-doc="consent" data-i18n="ft.consent">Согласие на обработку персональных данных</a>
+        <a href="#" data-doc="offer" data-i18n="ft.offer">Пользовательское соглашение</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="ft.bottom1">© 2024 ТеплоТихо — окна и остекление. Информация на сайте не является публичной офертой.</span>
+      <span data-i18n="ft.bottom2">Цены предварительные, точная смета — после бесплатного замера.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= FLOATING CTA ================= -->
+<button class="fab" id="fab" data-modal-open="modal-measure"><span class="dot"></span><span data-i18n="hdr.cta">Бесплатный замер</span></button>
+<div class="mobile-cta">
+  <a href="#calc" class="btn btn-accent" data-i18n="hero.cta1">Рассчитать стоимость</a>
+  <button class="btn btn-dark mc-icon" data-modal-open="modal-measure" aria-label="Замер">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-8" stroke="#fff" stroke-width="2" stroke-linecap="round"/><path d="M15 7h6v6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+</div>
+
+<!-- ================= МОДАЛКИ ================= -->
+<div class="modal" id="modal-measure" role="dialog" aria-modal="true">
+  <div class="modal-overlay" data-modal-close></div>
+  <div class="modal-dialog">
+    <button class="modal-close" data-modal-close aria-label="Закрыть"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    <div class="modal-title" data-i18n="mm.title">Вызвать замерщика бесплатно</div>
+    <p class="modal-sub" data-i18n="mm.sub">Специалист приедет в удобное время, измерит проёмы и зафиксирует цену в смете. Это бесплатно и ни к чему не обязывает.</p>
+    <form data-form novalidate>
+      <div class="form-field"><label data-i18n="form.name">Имя</label><input type="text" name="name" data-i18n-ph="form.namePh" placeholder="Как к вам обращаться" data-validate="name"><div class="field-error" data-i18n="form.errName">Укажите имя (минимум 2 буквы)</div></div>
+      <div class="form-field"><label data-i18n="form.phone">Телефон</label><input type="tel" name="phone" placeholder="+38 (0__) ___-__-__" data-validate="phone"><div class="field-error" data-i18n="form.errPhone">Введите телефон полностью</div></div>
+      <div class="form-field"><label data-i18n="form.time">Удобное время звонка</label><select name="time"><option data-i18n="time.any">Любое время</option><option>9:00–12:00</option><option>12:00–15:00</option><option>15:00–18:00</option><option>18:00–21:00</option></select></div>
+      <div class="form-field"><label data-i18n="form.comment">Комментарий (необязательно)</label><textarea name="comment" data-i18n-ph="form.commentPh" placeholder="Например: 3 окна в панельном доме, продувает балконную дверь"></textarea></div>
+      <button type="submit" class="btn btn-accent btn-block" data-i18n="mm.btn">Вызвать замерщика бесплатно</button>
+      <p class="form-consent" data-i18n-html="form.consent">Нажимая кнопку, вы соглашаетесь с <a href="#" data-doc="privacy">политикой конфиденциальности</a> и <a href="#" data-doc="consent">обработкой персональных данных</a>.</p>
+    </form>
+    <div class="form-success"><div class="fs-ico"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3 data-i18n="mm.okTitle">Заявка принята</h3><p data-i18n="mm.okText">Специалист свяжется с вами для уточнения размеров и подготовки точного расчёта. Замер бесплатный и ни к чему не обязывает.</p><button class="btn btn-dark" data-modal-close data-i18n="btn.close">Закрыть</button></div>
+  </div>
+</div>
+
+<div class="modal" id="modal-calc" role="dialog" aria-modal="true">
+  <div class="modal-overlay" data-modal-close></div>
+  <div class="modal-dialog">
+    <button class="modal-close" data-modal-close aria-label="Закрыть"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    <div class="modal-title" data-i18n="mc.title">Получить точный расчёт бесплатно</div>
+    <p class="modal-sub" data-i18n="mc.sub">Проверим конфигурацию, уточним детали и подготовим смету до гривны. Перезвоним в течение 15 минут в рабочее время.</p>
+    <div class="modal-summary" id="calcSummaryLine"></div>
+    <form data-form novalidate>
+      <div class="form-field"><label data-i18n="form.name">Имя</label><input type="text" name="name" data-i18n-ph="form.namePh" placeholder="Как к вам обращаться" data-validate="name"><div class="field-error" data-i18n="form.errName">Укажите имя (минимум 2 буквы)</div></div>
+      <div class="form-field"><label data-i18n="form.phone">Телефон</label><input type="tel" name="phone" placeholder="+38 (0__) ___-__-__" data-validate="phone"><div class="field-error" data-i18n="form.errPhone">Введите телефон полностью</div></div>
+      <div class="form-field"><label data-i18n="form.time">Удобное время звонка</label><select name="time"><option data-i18n="time.any">Любое время</option><option>9:00–12:00</option><option>12:00–15:00</option><option>15:00–18:00</option><option>18:00–21:00</option></select></div>
+      <button type="submit" class="btn btn-accent btn-block" data-i18n="mc.btn">Получить точный расчёт</button>
+      <p class="form-consent" data-i18n-html="form.consentShort">Нажимая кнопку, вы соглашаетесь с <a href="#" data-doc="privacy">политикой конфиденциальности</a>.</p>
+    </form>
+    <div class="form-success"><div class="fs-ico"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3 data-i18n="mc.okTitle">Заявка принята</h3><p data-i18n="mc.okText">Спасибо! Мы получили вашу заявку. Специалист свяжется с вами в ближайшее время для уточнения деталей и подготовки точного расчёта.</p><button class="btn btn-dark" data-modal-close data-i18n="btn.close">Закрыть</button></div>
+  </div>
+</div>
+
+<div class="modal" id="modal-promo" role="dialog" aria-modal="true">
+  <div class="modal-overlay" data-modal-close></div>
+  <div class="modal-dialog">
+    <button class="modal-close" data-modal-close aria-label="Закрыть"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    <div class="modal-title" data-i18n="mp.title">Забрать предложение недели</div>
+    <p class="modal-sub" data-i18n="mp.sub">Энергосберегающее стекло по цене обычного + москитная сетка в подарок к каждому открывающемуся окну. Зафиксируем условия за вами до конца недели.</p>
+    <form data-form novalidate>
+      <div class="form-field"><label data-i18n="form.name">Имя</label><input type="text" name="name" data-i18n-ph="form.namePh" placeholder="Как к вам обращаться" data-validate="name"><div class="field-error" data-i18n="form.errName">Укажите имя (минимум 2 буквы)</div></div>
+      <div class="form-field"><label data-i18n="form.phone">Телефон</label><input type="tel" name="phone" placeholder="+38 (0__) ___-__-__" data-validate="phone"><div class="field-error" data-i18n="form.errPhone">Введите телефон полностью</div></div>
+      <button type="submit" class="btn btn-accent btn-block" data-i18n="pm.cta">Забрать предложение</button>
+      <p class="form-consent" data-i18n-html="form.consentShort">Нажимая кнопку, вы соглашаетесь с <a href="#" data-doc="privacy">политикой конфиденциальности</a>.</p>
+    </form>
+    <div class="form-success"><div class="fs-ico"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3 data-i18n="mp.okTitle">Предложение закреплено за вами</h3><p data-i18n="mp.okText">Мы получили заявку и сохранили условия акции. Специалист позвонит, чтобы согласовать удобное время бесплатного замера.</p><button class="btn btn-dark" data-modal-close data-i18n="btn.close">Закрыть</button></div>
+  </div>
+</div>
+
+<div class="modal" id="modal-deadline" role="dialog" aria-modal="true">
+  <div class="modal-overlay" data-modal-close></div>
+  <div class="modal-dialog">
+    <button class="modal-close" data-modal-close aria-label="Закрыть"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    <div class="modal-title" data-i18n="md.title">Рассчитать сроки для моего объекта</div>
+    <p class="modal-sub" data-i18n="md.sub">Скажем, сколько займёт изготовление и монтаж именно в вашем случае: квартира, дом, балкон или лоджия.</p>
+    <form data-form novalidate>
+      <div class="form-field"><label data-i18n="form.name">Имя</label><input type="text" name="name" data-i18n-ph="form.namePh" placeholder="Как к вам обращаться" data-validate="name"><div class="field-error" data-i18n="form.errName">Укажите имя (минимум 2 буквы)</div></div>
+      <div class="form-field"><label data-i18n="form.phone">Телефон</label><input type="tel" name="phone" placeholder="+38 (0__) ___-__-__" data-validate="phone"><div class="field-error" data-i18n="form.errPhone">Введите телефон полностью</div></div>
+      <div class="form-field"><label data-i18n="md.commentLabel">Что планируете остеклить?</label><textarea name="comment" data-i18n="md.commentPre">Хочу узнать сроки изготовления и монтажа для моего объекта</textarea></div>
+      <button type="submit" class="btn btn-accent btn-block" data-i18n="md.btn">Узнать сроки</button>
+      <p class="form-consent" data-i18n-html="form.consentShort">Нажимая кнопку, вы соглашаетесь с <a href="#" data-doc="privacy">политикой конфиденциальности</a>.</p>
+    </form>
+    <div class="form-success"><div class="fs-ico"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3 data-i18n="md.okTitle">Заявка принята</h3><p data-i18n="md.okText">Посчитаем сроки по вашему объекту и перезвоним с конкретными датами: изготовление, доставка и окно монтажа.</p><button class="btn btn-dark" data-modal-close data-i18n="btn.close">Закрыть</button></div>
+  </div>
+</div>
+
+<div class="modal" id="modal-profile" role="dialog" aria-modal="true">
+  <div class="modal-overlay" data-modal-close></div>
+  <div class="modal-dialog">
+    <button class="modal-close" data-modal-close aria-label="Закрыть"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    <div class="modal-title" id="mProfileTitle">Профиль</div>
+    <p class="modal-sub" id="mProfileSub"></p>
+    <table class="spec-table" id="mProfileTable"></table>
+    <div style="display:flex;gap:10px;margin-top:22px;flex-wrap:wrap">
+      <button class="btn btn-accent btn-sm" id="mProfileUse" data-i18n="pr.useProfile">Рассчитать с этим профилем</button>
+      <button class="btn btn-ghost btn-sm" data-modal-close data-i18n="btn.close">Закрыть</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modal-doc" role="dialog" aria-modal="true">
+  <div class="modal-overlay" data-modal-close></div>
+  <div class="modal-dialog">
+    <button class="modal-close" data-modal-close aria-label="Закрыть"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    <div class="modal-title" id="mDocTitle">Документ</div>
+    <div class="doc-text" id="mDocBody" style="margin-top:14px"></div>
+    <button class="btn btn-dark btn-sm" style="margin-top:20px" data-modal-close data-i18n="btn.close">Закрыть</button>
+  </div>
+</div>
+
+<script src="js/app.js" defer></script>
+</body>
+</html>
 
