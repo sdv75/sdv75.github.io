@@ -1,1 +1,431 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BREGO Estate — Недвижимость на побережье Болгарии</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230E2438'/><path d='M6 20c3-4 6-4 9 0s6 4 9 0' stroke='%23E3B04B' stroke-width='2.6' fill='none' stroke-linecap='round'/><path d='M6 14c3-4 6-4 9 0s6 4 9 0' stroke='%23fff' stroke-width='2.6' fill='none' stroke-linecap='round'/></svg>">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/unbounded@latest/cyrillic-400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/unbounded@latest/cyrillic-600.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/unbounded@latest/latin-400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/unbounded@latest/latin-600.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/manrope@latest/cyrillic-400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/manrope@latest/cyrillic-500.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/manrope@latest/cyrillic-600.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/manrope@latest/cyrillic-700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/manrope@latest/cyrillic-800.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/manrope@latest/latin-400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/manrope@latest/latin-500.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/manrope@latest/latin-600.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/manrope@latest/latin-700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/manrope@latest/latin-800.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
+<!-- ================= HEADER ================= -->
+<header id="header">
+  <div class="container head-in">
+    <a class="logo" href="#top">
+      <span class="logo-mark"><svg width="24" height="24" viewBox="0 0 32 32" fill="none"><path d="M6 20c3-4 6-4 9 0s6 4 9 0" stroke="#E3B04B" stroke-width="2.6" stroke-linecap="round"/><path d="M6 13c3-4 6-4 9 0s6 4 9 0" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg></span>
+      <span class="logo-txt">BREGO Estate<small data-i18n="brand.tag"></small></span>
+    </a>
+    <nav class="main-nav">
+      <a href="#catalog" data-i18n="nav.catalog"></a>
+      <a href="#calc" data-i18n="nav.calc"></a>
+      <a href="#reviews" data-i18n="nav.reviews"></a>
+      <a href="#contacts" data-i18n="nav.contacts"></a>
+    </nav>
+    <div class="head-right">
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button data-lang="ru" class="active">RU</button>
+        <button data-lang="bg">BG</button>
+      </div>
+      <button class="btn btn-sm head-cta" data-open-request data-i18n="nav.cta"></button>
+      <button class="burger" id="burger" aria-label="menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#catalog" data-i18n="nav.catalog"></a>
+  <a href="#calc" data-i18n="nav.calc"></a>
+  <a href="#reviews" data-i18n="nav.reviews"></a>
+  <a href="#contacts" data-i18n="nav.contacts"></a>
+  <button class="btn" data-open-request data-i18n="nav.cta"></button>
+</div>
+
+<!-- ================= HERO ================= -->
+<div class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="container">
+    <span class="hero-badge"><svg viewBox="0 0 24 24" fill="none" stroke="#E3B04B" stroke-width="2" stroke-linecap="round"><path d="M2 9c2.5-3 5-3 7.5 0s5 3 7.5 0 4-2.4 5-1.5"/><path d="M2 15c2.5-3 5-3 7.5 0s5 3 7.5 0 4-2.4 5-1.5"/></svg> <span data-i18n="hero.badge"></span></span>
+    <h1 data-i18n="hero.title"></h1>
+    <p class="hero-sub" data-i18n="hero.sub"></p>
+    <div class="hero-actions">
+      <button class="btn" data-open-request data-i18n="hero.btn1"></button>
+      <a class="btn btn-light" href="#catalog" data-i18n="hero.btn2"></a>
+    </div>
+
+    <!-- SEARCH -->
+    <div class="search-card reveal">
+      <div class="search-top">
+        <h3 data-i18n="search.title"></h3>
+      </div>
+      <div class="search-grid">
+        <div class="field">
+          <label data-i18n="search.city"></label>
+          <select id="fCity">
+            <option value="all" data-i18n="opt.city.all"></option>
+            <option value="varna">Варна</option>
+            <option value="burgas">Бургас</option>
+            <option value="sozopol">Созопол</option>
+            <option value="sunny">Слънчев бряг</option>
+            <option value="balchik">Балчик</option>
+            <option value="obzor">Обзор</option>
+            <option value="svlas">Свети Влас</option>
+            <option value="sofia">София</option>
+          </select>
+        </div>
+        <div class="field">
+          <label data-i18n="search.type"></label>
+          <select id="fType">
+            <option value="all" data-i18n="opt.type.all"></option>
+            <option value="apartment" data-i18n="type.apartment"></option>
+            <option value="house" data-i18n="type.house"></option>
+            <option value="studio" data-i18n="type.studio"></option>
+            <option value="penthouse" data-i18n="type.penthouse"></option>
+            <option value="townhouse" data-i18n="type.townhouse"></option>
+          </select>
+        </div>
+        <div class="field">
+          <label data-i18n="search.rooms"></label>
+          <select id="fRooms">
+            <option value="0" data-i18n="opt.rooms.any"></option>
+            <option value="1">1+</option>
+            <option value="2">2+</option>
+            <option value="3">3+</option>
+            <option value="4">4+</option>
+          </select>
+        </div>
+        <div class="field">
+          <label><span data-i18n="search.price"></span> <span class="range-val" id="priceVal"></span></label>
+          <input type="range" id="fPrice" min="50000" max="500000" step="5000" value="500000">
+        </div>
+        <div class="field field-btn" style="display:flex;gap:10px">
+          <button class="btn" id="searchBtn" data-i18n="search.btn"></button>
+          <button class="btn btn-ghost" id="searchReset" data-i18n="search.reset"></button>
+        </div>
+      </div>
+      <div class="results-panel" id="resultsPanel">
+        <div class="results-head">
+          <h4 id="resultsCount"></h4>
+        </div>
+        <div class="results-grid" id="resultsGrid"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= STATS ================= -->
+<div class="stats">
+  <div class="container stats-grid">
+    <div class="stat"><b data-count="12">0</b><span data-i18n="stat1"></span></div>
+    <div class="stat"><b data-count="1540">0</b><span data-i18n="stat2"></span></div>
+    <div class="stat"><b data-count="40" data-suffix="+">0</b><span data-i18n="stat3"></span></div>
+    <div class="stat"><b data-count="98" data-suffix="%">0</b><span data-i18n="stat4"></span></div>
+  </div>
+</div>
+
+<!-- ================= MARQUEE ================= -->
+<div class="marquee" aria-hidden="true">
+  <div class="mq-track" id="mqTrack"></div>
+</div>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <div class="container about-grid">
+    <div class="about-img reveal">
+      <img src="assets/images/about-coast.png" alt="Black Sea coast aerial">
+      <div class="about-float"><b>40+</b><span data-i18n="about.float"></span></div>
+    </div>
+    <div class="about-txt reveal">
+      <span class="eyebrow" data-i18n="about.eyebrow"></span>
+      <h2 style="font-size:clamp(24px,3vw,36px);color:var(--navy);margin-bottom:20px" data-i18n="about.title"></h2>
+      <p data-i18n="about.p1"></p>
+      <p data-i18n="about.p2"></p>
+      <div class="feat-list">
+        <div class="feat"><span class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#128097" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2" fill="#128097"/></svg></span><div><b data-i18n="about.f1t"></b><span data-i18n="about.f1s"></span></div></div>
+        <div class="feat"><span class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#128097" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6z"/><path d="M9.5 12l2 2 3.5-4"/></svg></span><div><b data-i18n="about.f2t"></b><span data-i18n="about.f2s"></span></div></div>
+        <div class="feat"><span class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#128097" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9"/><path d="M17 4l3 3"/><path d="M14 7l3 3"/></svg></span><div><b data-i18n="about.f3t"></b><span data-i18n="about.f3s"></span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CATALOG ================= -->
+<section id="catalog" style="background:#fff">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div>
+        <span class="eyebrow" data-i18n="cat.eyebrow"></span>
+        <h2 data-i18n="cat.title"></h2>
+      </div>
+      <p data-i18n="cat.sub"></p>
+    </div>
+    <div class="carousel reveal" id="catCar">
+      <div class="car-view"><div class="car-track" id="catTrack"></div></div>
+      <div style="display:flex;justify-content:flex-end;margin-top:26px">
+        <div class="car-nav">
+          <button class="car-btn" data-dir="-1" aria-label="prev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <button class="car-btn" data-dir="1" aria-label="next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CALCULATOR ================= -->
+<section id="calc">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div>
+        <span class="eyebrow" data-i18n="calc.eyebrow"></span>
+        <h2 data-i18n="calc.title"></h2>
+      </div>
+    </div>
+    <div class="calc-grid">
+      <div class="calc-panel reveal">
+        <div class="calc-row">
+          <div class="lab"><label data-i18n="calc.price"></label><b id="vPrice"></b></div>
+          <input type="range" id="cPrice" min="30000" max="600000" step="5000" value="145000">
+        </div>
+        <div class="calc-row">
+          <div class="lab"><label data-i18n="calc.down"></label><b id="vDown"></b></div>
+          <input type="range" id="cDown" min="10" max="90" step="5" value="30">
+        </div>
+        <div class="calc-row">
+          <div class="lab"><label data-i18n="calc.term"></label><b id="vTerm"></b></div>
+          <input type="range" id="cTerm" min="3" max="30" step="1" value="20">
+        </div>
+        <div class="calc-row" style="margin-bottom:6px">
+          <div class="lab"><label data-i18n="calc.rate"></label><b id="vRate"></b></div>
+          <input type="range" id="cRate" min="2" max="9" step="0.1" value="4.6">
+        </div>
+      </div>
+      <div class="calc-res reveal">
+        <div class="cur-toggle">
+          <button data-cur="EUR" class="active">EUR €</button>
+          <button data-cur="BGN">BGN лв.</button>
+        </div>
+        <h3 data-i18n="calc.monthly"></h3>
+        <div class="monthly" id="outMonthly">—</div>
+        <div class="bars"><i class="b1" id="barP"></i><i class="b2" id="barI"></i></div>
+        <div class="bar-legend">
+          <span><i style="background:var(--accent)"></i><span data-i18n="calc.legend1"></span></span>
+          <span><i style="background:var(--teal)"></i><span data-i18n="calc.legend2"></span></span>
+        </div>
+        <div class="calc-lines">
+          <div class="calc-line"><span data-i18n="calc.loan"></span><b id="outLoan">—</b></div>
+          <div class="calc-line"><span data-i18n="calc.downSum"></span><b id="outDown">—</b></div>
+          <div class="calc-line"><span data-i18n="calc.over"></span><b id="outOver">—</b></div>
+          <div class="calc-line"><span data-i18n="calc.total"></span><b id="outTotal">—</b></div>
+        </div>
+        <button class="btn" style="width:100%" data-open-request data-calc="1" data-i18n="calc.btn"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= REVIEWS ================= -->
+<section id="reviews">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div>
+        <span class="eyebrow" data-i18n="rev.eyebrow"></span>
+        <h2 data-i18n="rev.title"></h2>
+      </div>
+      <p data-i18n="rev.sub"></p>
+    </div>
+    <div class="carousel reveal" id="revCar">
+      <div class="car-view"><div class="car-track" id="revTrack"></div></div>
+      <div style="display:flex;justify-content:flex-end;margin-top:26px">
+        <div class="car-nav">
+          <button class="car-btn" data-dir="-1" aria-label="prev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <button class="car-btn" data-dir="1" aria-label="next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACTS ================= -->
+<section id="contacts">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div>
+        <span class="eyebrow" data-i18n="con.eyebrow"></span>
+        <h2 data-i18n="con.title"></h2>
+      </div>
+      <p data-i18n="con.sub"></p>
+    </div>
+    <div class="con-grid">
+      <div class="reveal">
+        <div class="con-cards">
+          <div class="con-card"><span class="con-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#E3B04B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></span><div><b data-i18n="con.addr"></b><span data-i18n="con.addrV"></span></div></div>
+          <div class="con-card"><span class="con-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#E3B04B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span><div><b data-i18n="con.phone"></b><span><a href="tel:+359876543210">+359 87 654 32 10</a></span></div></div>
+          <div class="con-card"><span class="con-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#E3B04B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><div><b data-i18n="con.email"></b><span><a href="mailto:hello@brego.estate">hello@brego.estate</a></span></div></div>
+          <div class="con-card"><span class="con-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#E3B04B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span><div><b data-i18n="con.hours"></b><span data-i18n="con.hoursV"></span></div></div>
+        </div>
+        <div class="map-btn-wrap">
+          <button class="btn btn-ghost" id="openMap" style="width:100%"><svg class="map-btn-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14"/><path d="M15 6v14"/></svg>&nbsp; <span data-i18n="con.map"></span></button>
+        </div>
+      </div>
+      <div class="contact-form reveal" id="contactFormBox">
+        <form id="contactForm" novalidate>
+          <h3 data-i18n="con.formTitle"></h3>
+          <div class="cf-grid">
+            <div class="field"><label data-i18n="con.formName"></label><input type="text" id="cfName" required></div>
+            <div class="field"><label data-i18n="con.formContact"></label><input type="text" id="cfContact" required></div>
+          </div>
+          <div class="field" style="margin-bottom:16px"><label data-i18n="con.formMsg"></label><textarea id="cfMsg" required></textarea></div>
+          <button class="btn" type="submit" data-i18n="con.formSend"></button>
+        </form>
+        <div class="form-ok" id="contactOk">
+          <div class="ok-ico"><svg viewBox="0 0 40 40"><path d="M10 21l7 7 13-15"/></svg></div>
+          <h4 data-i18n="con.okTitle"></h4>
+          <p data-i18n="con.okText"></p>
+          <button class="btn btn-ghost btn-sm" id="contactAgain" data-i18n="con.okAgain"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container">
+    <div class="f-grid">
+      <div>
+        <div class="f-logo">
+          <span class="logo-mark"><svg width="24" height="24" viewBox="0 0 32 32" fill="none"><path d="M6 20c3-4 6-4 9 0s6 4 9 0" stroke="#E3B04B" stroke-width="2.6" stroke-linecap="round"/><path d="M6 13c3-4 6-4 9 0s6 4 9 0" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg></span>
+          <span class="logo-txt">BREGO Estate<small data-i18n="brand.tag"></small></span>
+        </div>
+        <p data-i18n="foot.desc"></p>
+        <div class="f-socials">
+          <a href="#" aria-label="facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7z"/></svg></a>
+          <a href="#" aria-label="instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" aria-label="telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 4L3 11.2l6.1 2.1 2.4 7.2 3.4-4.5 4.5 3.3zM8.5 12.6l8.5-5.5-6.8 6.3-.3 2.6z"/></svg></a>
+          <a href="#" aria-label="whatsapp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z"/><path d="M9 9.5c.5 2.5 3 5 5.5 5.5l1-1.5 2 1c-.5 1.5-1.5 2-3 1.5-3-1-6-4-7-7-.5-1.5 0-2.5 1.5-3l1 2z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4 data-i18n="foot.menu"></h4>
+        <div class="f-menu">
+          <a href="#catalog" data-i18n="nav.catalog"></a>
+          <a href="#calc" data-i18n="nav.calc"></a>
+          <a href="#reviews" data-i18n="nav.reviews"></a>
+          <a href="#contacts" data-i18n="nav.contacts"></a>
+        </div>
+      </div>
+      <div>
+        <h4 data-i18n="foot.contacts"></h4>
+        <div class="f-con">
+          <span data-i18n="con.addrV"></span>
+          <a href="tel:+359876543210">+359 87 654 32 10</a>
+          <a href="mailto:hello@brego.estate">hello@brego.estate</a>
+          <span data-i18n="con.hoursV"></span>
+        </div>
+      </div>
+      <div>
+        <h4 data-i18n="foot.demoT"></h4>
+        <p data-i18n="foot.demoTx"></p>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>© 2026 BREGO Estate. <span data-i18n="foot.rights"></span></span>
+      <span data-i18n="foot.made"></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= REQUEST MODAL ================= -->
+<div class="modal" id="reqModal" aria-modal="true" role="dialog">
+  <div class="modal-ov" data-close></div>
+  <div class="modal-box">
+    <div class="modal-head">
+      <div><h3 data-i18n="req.title"></h3><p data-i18n="req.sub"></p></div>
+      <button class="modal-close" data-close>✕</button>
+    </div>
+    <div class="modal-body">
+      <form id="reqForm" novalidate>
+        <div class="req-grid">
+          <div class="field"><label data-i18n="req.name"></label><input type="text" id="rqName" required></div>
+          <div class="field"><label data-i18n="req.phone"></label><input type="tel" id="rqPhone" placeholder="+359 ..." required></div>
+          <div class="field"><label data-i18n="req.email"></label><input type="email" id="rqEmail"></div>
+          <div class="field"><label data-i18n="req.city"></label>
+            <select id="rqCity">
+              <option value="all" data-i18n="opt.city.all"></option>
+              <option value="varna">Варна</option><option value="burgas">Бургас</option>
+              <option value="sozopol">Созопол</option><option value="sunny">Слънчев бряг</option>
+              <option value="balchik">Балчик</option><option value="obzor">Обзор</option>
+              <option value="svlas">Свети Влас</option><option value="sofia">София</option>
+            </select>
+          </div>
+          <div class="field"><label data-i18n="req.type"></label>
+            <select id="rqType">
+              <option value="all" data-i18n="opt.type.all"></option>
+              <option value="apartment" data-i18n="type.apartment"></option>
+              <option value="house" data-i18n="type.house"></option>
+              <option value="studio" data-i18n="type.studio"></option>
+              <option value="penthouse" data-i18n="type.penthouse"></option>
+              <option value="townhouse" data-i18n="type.townhouse"></option>
+            </select>
+          </div>
+          <div class="field"><label data-i18n="req.budget"></label><input type="number" id="rqBudget" min="10000" step="5000"></div>
+          <div class="field full"><label data-i18n="req.comment"></label><textarea id="rqComment" style="width:100%;min-height:88px;padding:12px 14px;border:1.6px solid var(--line);border-radius:12px;background:#fbfcfd;outline:none;resize:vertical"></textarea></div>
+        </div>
+        <label class="consent"><input type="checkbox" id="rqAgree" checked><span data-i18n="req.agree"></span></label>
+        <button class="btn" type="submit" style="width:100%" data-i18n="req.send"></button>
+      </form>
+      <div class="form-ok" id="reqOk">
+        <div class="ok-ico"><svg viewBox="0 0 40 40"><path d="M10 21l7 7 13-15"/></svg></div>
+        <h4 data-i18n="req.okTitle"></h4>
+        <p data-i18n="req.okText"></p>
+        <span class="ok-num" id="reqNum"></span>
+        <p style="font-size:13px" data-i18n="req.okNote"></p>
+        <div style="margin-top:18px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+          <button class="btn btn-ghost btn-sm" id="reqAgain" data-i18n="req.okAgain"></button>
+          <button class="btn btn-sm" data-close data-i18n="req.okClose"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= MAP MODAL ================= -->
+<div class="modal" id="mapModal" aria-modal="true" role="dialog">
+  <div class="modal-ov" data-close></div>
+  <div class="modal-box wide">
+    <div class="modal-head">
+      <div><h3 data-i18n="map.title"></h3><p data-i18n="map.hint"></p></div>
+      <button class="modal-close" data-close>✕</button>
+    </div>
+    <div class="map-wrap">
+      <div class="map-side">
+        <h5 data-i18n="map.cities"></h5>
+        <div id="mapCityList"></div>
+      </div>
+      <div class="map-area" id="mapArea">
+        <img class="map-bg" src="assets/images/map-bg.png" alt="map">
+        <div id="mapPins"></div>
+        <div class="map-popup" id="mapPopup"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"><span class="toast-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></span><span id="toastTxt"></span></div>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
