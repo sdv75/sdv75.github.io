@@ -1,7 +1,12 @@
 self.__BUILD_MANIFEST = {
   "__rewrites": {
     "afterFiles": [],
-    "beforeFiles": [],
+    "beforeFiles": [
+      {
+        "source": "/lp/lp_glamping//_next/:path+",
+        "destination": "/lp/lp_glamping/_next/:path+"
+      }
+    ],
     "fallback": []
   },
   "sortedPages": [
