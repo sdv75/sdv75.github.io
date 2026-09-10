@@ -3,8 +3,8 @@ self.__BUILD_MANIFEST = {
     "afterFiles": [],
     "beforeFiles": [
       {
-        "source": "/lp/lp_glamping//_next/:path+",
-        "destination": "/lp/lp_glamping/_next/:path+"
+        "source": "/lp/lp-glamping//_next/:path+",
+        "destination": "/lp/lp-glamping/_next/:path+"
       }
     ],
     "fallback": []

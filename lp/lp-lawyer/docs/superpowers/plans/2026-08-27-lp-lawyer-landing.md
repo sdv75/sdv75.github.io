@@ -79,7 +79,7 @@ Expected: FAIL because production files are still missing.
 - Create: `assets/image-prompts.md`
 
 **Interfaces:**
-- Consumes: `reference/lp_lawyer_1.png`.
+- Consumes: `reference/lp-lawyer_1.png`.
 - Produces: asset files referenced by `index.html`.
 
 - [ ] **Step 1: Extract temporary raster assets**

@@ -2,7 +2,7 @@
 
 ## Goal
 
-Build a static front-end landing page matching the provided `reference/lp_lawyer_*.png` screenshots as closely as possible.
+Build a static front-end landing page matching the provided `reference/lp-lawyer_*.png` screenshots as closely as possible.
 
 ## Scope
 

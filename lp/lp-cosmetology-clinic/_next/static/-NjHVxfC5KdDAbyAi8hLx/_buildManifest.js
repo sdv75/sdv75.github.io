@@ -3,8 +3,8 @@ self.__BUILD_MANIFEST = {
     "afterFiles": [],
     "beforeFiles": [
       {
-        "source": "/lp/lp_cosmetology_clinic//_next/:path+",
-        "destination": "/lp/lp_cosmetology_clinic/_next/:path+"
+        "source": "/lp/lp-cosmetology-clinic//_next/:path+",
+        "destination": "/lp/lp-cosmetology-clinic/_next/:path+"
       }
     ],
     "fallback": []

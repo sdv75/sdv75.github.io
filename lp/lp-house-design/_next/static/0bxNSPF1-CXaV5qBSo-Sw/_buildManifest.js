@@ -3,8 +3,8 @@ self.__BUILD_MANIFEST = {
     "afterFiles": [],
     "beforeFiles": [
       {
-        "source": "/lp/lp_house_design//_next/:path+",
-        "destination": "/lp/lp_house_design/_next/:path+"
+        "source": "/lp/lp-house-design//_next/:path+",
+        "destination": "/lp/lp-house-design/_next/:path+"
       }
     ],
     "fallback": []
