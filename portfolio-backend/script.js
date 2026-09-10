@@ -232,11 +232,14 @@ function setupParallax() {
     });
 }
 
-// Contacts: единый источник — /contacts.json в корне сайта.
-// Подставляет значения в элементы с data-contact (href и текст).
-// Если fetch не удался (например, file://), остаются захардкоженные значения из HTML.
+// Contacts: единый источник — /contacts.js в корне сайта (window.SITE_CONTACTS).
+// В HTML хардкода контактов нет, только плейсхолдеры с data-contact.
+// Значения подставляются из переменных contacts.js.
 function applyContacts(contacts) {
-    if (!contacts) return;
+    if (!contacts) {
+        console.error('SITE_CONTACTS is missing: contacts.js not loaded');
+        return;
+    }
 
     const setHref = (key, value) => {
         if (!value) return;
@@ -268,25 +271,9 @@ function applyContacts(contacts) {
     }
 }
 
-async function loadContacts() {
-    // Абсолютный путь — для GitHub Pages, относительные — fallback для подпапок и локального просмотра
-    const urls = ['/contacts.json', '../../contacts.json', '../contacts.json'];
-    for (const url of urls) {
-        try {
-            const res = await fetch(url);
-            if (!res.ok) continue;
-            const data = await res.json();
-            applyContacts(data);
-            return;
-        } catch (e) {
-            // пробуем следующий путь
-        }
-    }
-}
-
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    loadContacts();
+    applyContacts(window.SITE_CONTACTS);
     // Определяем текущий язык по URL
     const path = window.location.pathname;
     let lang = 'en'; // язык по умолчанию
