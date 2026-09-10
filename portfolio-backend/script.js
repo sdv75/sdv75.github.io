@@ -232,8 +232,61 @@ function setupParallax() {
     });
 }
 
+// Contacts: единый источник — /contacts.json в корне сайта.
+// Подставляет значения в элементы с data-contact (href и текст).
+// Если fetch не удался (например, file://), остаются захардкоженные значения из HTML.
+function applyContacts(contacts) {
+    if (!contacts) return;
+
+    const setHref = (key, value) => {
+        if (!value) return;
+        document.querySelectorAll(`[data-contact="${key}"]`).forEach((el) => {
+            if (el.tagName.toLowerCase() === 'a') {
+                el.setAttribute('href', value);
+            }
+        });
+    };
+
+    const setText = (key, value) => {
+        if (!value) return;
+        document.querySelectorAll(`[data-contact="${key}"]`).forEach((el) => {
+            el.textContent = value;
+        });
+    };
+
+    if (contacts.telegram) {
+        setHref('telegram-url', contacts.telegram.url);
+        setText('telegram-display', contacts.telegram.display);
+    }
+    if (contacts.email) {
+        setHref('email-mailto', contacts.email.mailto);
+        setText('email-address', contacts.email.address);
+    }
+    if (contacts.whatsapp) {
+        setHref('whatsapp-url', contacts.whatsapp.wa_url);
+        setText('whatsapp-display', contacts.whatsapp.phone_display);
+    }
+}
+
+async function loadContacts() {
+    // Абсолютный путь — для GitHub Pages, относительные — fallback для подпапок и локального просмотра
+    const urls = ['/contacts.json', '../../contacts.json', '../contacts.json'];
+    for (const url of urls) {
+        try {
+            const res = await fetch(url);
+            if (!res.ok) continue;
+            const data = await res.json();
+            applyContacts(data);
+            return;
+        } catch (e) {
+            // пробуем следующий путь
+        }
+    }
+}
+
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
+    loadContacts();
     // Определяем текущий язык по URL
     const path = window.location.pathname;
     let lang = 'en'; // язык по умолчанию
