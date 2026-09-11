@@ -1,0 +1,2 @@
+:HL["/lp/lp-hiking-club/_next/static/chunks/3k0figz7j7qkj.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"3q9ihHiH0Qf5Q0HrUTktL"}
