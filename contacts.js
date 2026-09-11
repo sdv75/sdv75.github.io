@@ -1,5 +1,5 @@
-// Единый источник контактов для portfolio-backend (en/ru/ua).
-// Подключается перед ../script.js: <script src="../../contacts.js"></script>
+// Единый источник контактов для portfolio-backend и portfolio-frontend (en/ru/ua).
+// Подключается как <script src="../../contacts.js"></script> перед script.js.
 // Менять контакты — только здесь.
 window.SITE_CONTACTS = {
   telegram: {

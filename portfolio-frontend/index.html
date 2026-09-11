@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+  <script>
+    (function () {
+      // Определяем базовый путь: например, "/portfolio-frontend" из URL "https://name.github.io/portfolio-frontend/"
+      const pathname = window.location.pathname;
+      const basePath = pathname.substring(0, pathname.lastIndexOf('/'));
+
+      // Определяем язык
+      const userLang = (navigator.language || navigator.userLanguage).toLowerCase();
+      let folder = 'en';
+      if (userLang.startsWith('ru')) {
+        folder = 'ru';
+      } else if (userLang.startsWith('uk') || userLang.startsWith('ua')) {
+        folder = 'ua';
+      }
+
+      // Формируем полный URL с учётом базового пути
+      const targetUrl = `${window.location.origin}${basePath}/${folder}`;
+
+      window.location.replace(targetUrl);
+    })();
+  </script>
+</head>
+
+<body>
+  <p>Redirecting...</p>
+</body>
+
+
+</html>
